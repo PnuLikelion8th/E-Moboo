@@ -8,15 +8,15 @@
 
 ## :star: 키워드
 
-:hash:*부산대학교 캠퍼스맵*
+:hash:  *부산대학교 캠퍼스맵*
 
-:hash:*부산대학교 강의평가*
+:hash:  *부산대학교 강의평가*
 
-:hash:*새학기를 위한*
+:hash:  *새학기를 위한*
 
-:hash:*슬기로운 대학생활*
+:hash:  *슬기로운 대학생활*
 
-:hash:*부산대는 넓다*
+:hash:  *부산대는 넓다*
 
 ## :date: 진행 기간 
 - 2020.2.19~ 2020.2.24
@@ -26,9 +26,9 @@
 
 - 김태훈 [[GitHub](https://github.com/tedhoon)]
 
-- 손혜림 [[GitHub](https://github.com/chihun-jang)]
+- 손혜림 [[GitHub](https://github.com/hyerimsn)]
 
-- 장치훈 [[GitHub](https://github.com/hyerimsn)]
+- 장치훈 [[GitHub](https://github.com/chihun-jang)]
 
 
 ## 📝 Todo list
