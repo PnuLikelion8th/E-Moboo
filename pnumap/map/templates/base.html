@@ -1,0 +1,32 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="EVERYMAP OF PNU">
+    <meta property="og:description" content="부산대학교 강의평가와 캠퍼스맵 - Likelion8th">
+    <meta property="og:image" content="{% static 'image/pnumap.jfif' %}">
+
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="Stylesheet" type="text/css" href="{% static 'css/base.css' %}?dt={% now 'Ymd' %}">
+
+    {% block extra_head %}{% endblock %}
+  
+</head>
+
+
+<body>  
+    <nav></nav>
+
+    {% block content %}
+    {% endblock %}    
+
+    <footer></footer>
+
+</body>
+</html>
+

@@ -1,11 +1,429 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+{%load static%}
+
+{%block title%}
+부산대학교 강의평가와 캠퍼스맵(Emop)
+{%endblock%}
+
+{%block extra_head%}
+    <meta name="description" content="부산대학교 강의평가와 캠퍼스맵 - Likelion8th" />   
+    <link rel="Stylesheet" type="text/css" href="{% static 'css/main.css' %}?dt={% now 'Ymd' %}">
+{%endblock%}
+
+
+
+{% block content %}
+
+    <button class="pack1 pack101" type="button" data-before="101">
+        <span class="num">101</span>
+        <span class="blind">MEMS / NANO 클린룸동</span>
+    </button> 
+    <button class="pack1 pack102" type="button" data-before="102">
+        <span class="num">102</span>
+        <span class="blind">제1부속공장</span>
+    </button> 
+    <button class="pack1 pack103" type="button" data-before="103">
+        <span class="num">103</span>
+        <span class="blind">제12공학관</span>
+    </button> 
+    <button class="pack1 pack105" type="button" data-before="105">
+        <span class="num">105</span>
+        <span class="blind">제3공학관(융합기계관)</span>
+    </button> 
+    <button class="pack1 pack106" type="button" data-before="106">
+        <span class="num">106</span>
+        <span class="blind">효원문화회관</span>
+    </button> 
+    <button class="pack1 pack107" type="button" data-before="107">
+        <span class="num">107</span>
+        <span class="blind">제8공학관(항공관)</span>
+    </button> 
+    <button class="pack1 pack108" type="button" data-before="108">
+        <span class="num">108</span>
+        <span class="blind">제9공학관(기전관)</span>
+    </button> 
+    <button class="pack1 pack109" type="button" data-before="109">
+        <span class="num">109</span>
+        <span class="blind">공과대학 공동실험관</span>
+    </button> 
+    <button class="pack1 pack110" type="button" data-before="110">
+        <span class="num">110</span>
+        <span class="blind">에너지분야 실험실</span>
+    </button> 
+    <button class="pack1 pack111" type="button" data-before="111">
+        <span class="num">111</span>
+        <span class="blind">실험폐기물처리장</span>
+    </button> 
+    <button class="pack2 pack201" type="button" data-before="201">
+        <span class="num">201</span>
+        <span class="blind">제6공학관(컴퓨터공학관)</span>
+    </button> 
+    <button class="pack2 pack202" type="button" data-before="202">
+        <span class="num">202</span>
+        <span class="blind">운죽정</span>
+    </button> 
+    <button class="pack2 pack203" type="button" data-before="203">
+        <span class="num">203</span>
+        <span class="blind">넉넉한터</span>
+    </button> 
+    <button class="pack2 pack204" type="button" data-before="204">
+        <span class="num">204</span>
+        <span class="blind">넉넉한터 지하주차장</span>
+    </button> 
+    <button class="pack2 pack205 overc" type="button" data-before="205">
+        <span class="num">205</span>
+        <span class="blind">대학본부</span>
+    </button> 
+    <button class="pack2 pack206" type="button" data-before="206">
+        <span class="num">206</span>
+        <span class="blind">제11공학관(조선해양공학관)</span>
+    </button> 
+    <button class="pack2 pack207" type="button" data-before="207">
+        <span class="num">207</span>
+        <span class="blind">제10 공학관(특성화공학관)</span>
+    </button> 
+    <button class="pack2 pack208" type="button" data-before="208">
+        <span class="num">208</span>
+        <span class="blind">기계기술연구동</span>
+    </button> 
+    <button class="pack2 pack209" type="button" data-before="209">
+        <span class="num">209</span>
+        <span class="blind">상남국제회관</span>
+    </button> 
+    <button class="pack2 pack210" type="button" data-before="210">
+        <span class="num">210</span>
+        <span class="blind">언어교육원</span>
+    </button> 
+    <button class="pack2 pack211" type="button" data-before="211">
+        <span class="num">211</span>
+        <span class="blind">보육종합센터</span>
+    </button> 
+    <button class="pack3 packK08" style="top: 485px; left: 111px;" type="button" data-before="K08">
+        <span class="num">K08</span>
+        <span class="blind">공대제2별관</span>
+    </button> 
+    <button class="pack3 pack301" style="top: 529px; left: 147px;" type="button" data-before="301">
+        <span class="num">301</span>
+        <span class="blind">구조실험동</span>
+    </button> 
+    <button class="pack3 pack302" style="top: 535px; left: 201px;" type="button" data-before="302">
+        <span class="num">302</span>
+        <span class="blind">토조실험동</span>
+    </button> 
+    <button class="pack3 pack303" style="top: 472px; left: 149px;" type="button" data-before="303">
+        <span class="num">303</span>
+        <span class="blind">기계관</span>
+    </button> 
+    <button class="pack3 pack306" type="button" data-before="306">
+        <span class="num">306</span>
+        <span class="blind">인문관</span>
+    </button> 
+    <button class="pack3 pack307" type="button" data-before="307">
+        <span class="num">307</span>
+        <span class="blind">인문대교수연구동</span>
+    </button> 
+    <button class="pack3 pack308" type="button" data-before="308">
+        <span class="num">308</span>
+        <span class="blind">제1물리관</span>
+    </button> 
+    <button class="pack3 pack309" type="button" data-before="309">
+        <span class="num">309</span>
+        <span class="blind">제2물리관</span>
+    </button> 
+    <button class="pack3 pack310" type="button" data-before="310">
+        <span class="num">310</span>
+        <span class="blind">문창회관</span>
+    </button> 
+    <button class="pack3 pack311" type="button" data-before="311">
+        <span class="num">311</span>
+        <span class="blind">공동연구기기동</span>
+    </button> 
+    <button class="pack3 pack312" type="button" data-before="312">
+        <span class="num">312</span>
+        <span class="blind">공동실험실습관</span>
+    </button> 
+    <button class="pack3 pack313" type="button" data-before="313">
+        <span class="num">313</span>
+        <span class="blind">자연대 연구실험동</span>
+    </button> 
+    <button class="pack3 pack314" type="button" data-before="314">
+        <span class="num">314</span>
+        <span class="blind">정보화교육관</span>
+    </button> 
+    <button class="pack3 pack315" type="button" data-before="315">
+        <span class="num">315</span>
+        <span class="blind">자유관 A동</span>
+    </button> 
+    <button class="pack3 pack316" type="button" data-before="316">
+        <span class="num">316</span>
+        <span class="blind">자유관 B동</span>
+    </button> 
+    <button class="pack3 pack318" type="button" data-before="318">
+        <span class="num">318</span>
+        <span class="blind">자유주차장</span>
+    </button> 
+    <button class="pack3 pack317" type="button" data-before="317">
+        <span class="num">317</span>
+        <span class="blind">직장어린이집</span>
+    </button> 
+    <button class="pack4 pack401" type="button" data-before="401">
+        <span class="num">401</span>
+        <span class="blind">건설관</span>
+    </button> 
+    <button class="pack4 pack402" type="button" data-before="402">
+        <span class="num">402</span>
+        <span class="blind">정학관</span>
+    </button> 
+    <button class="pack4 pack403" type="button" data-before="403">
+        <span class="num">403</span>
+        <span class="blind">10. 16 기념관</span>
+    </button> 
+    <button class="pack4 pack405" type="button" data-before="405">
+        <span class="num">405</span>
+        <span class="blind">제2공학관(재료관)</span>
+    </button> 
+    <button class="pack4 pack406" type="button" data-before="406">
+        <span class="num">406</span>
+        <span class="blind">제7공학관(화공관)</span>
+    </button> 
+    <button class="pack4 pack407" type="button" data-before="407">
+        <span class="num">407</span>
+        <span class="blind">선박예인수조연구동</span>
+    </button> 
+    <button class="pack4 pack408" type="button" data-before="408">
+        <span class="num">408</span>
+        <span class="blind">제5공학관(유기소재관)</span>
+    </button> 
+    <button class="pack4 pack409" type="button" data-before="409">
+        <span class="num">409</span>
+        <span class="blind">교수회관</span>
+    </button> 
+    <button class="pack4 pack410" type="button" data-before="410">
+        <span class="num">410</span>
+        <span class="blind">선박충격ㆍ피로ㆍ도장시험연구동</span>
+    </button> 
+    <button class="pack4 pack411" type="button" data-before="411">
+        <span class="num">411</span>
+        <span class="blind">자연과학관</span>
+    </button> 
+    <button class="pack4 pack412" type="button" data-before="412">
+        <span class="num">412</span>
+        <span class="blind">박물관 A</span>
+    </button> 
+    <button class="pack4 pack413" type="button" data-before="413">
+        <span class="num">413</span>
+        <span class="blind">박물관 B</span>
+    </button> 
+    <button class="pack4 pack414" type="button" data-before="414">
+        <span class="num">414</span>
+        <span class="blind">지구관</span>
+    </button> 
+    <button class="pack4 pack415" type="button" data-before="415">
+        <span class="num">415</span>
+        <span class="blind">샛벌회관</span>
+    </button> 
+    <button class="pack4 pack416" type="button" data-before="416">
+        <span class="num">416</span>
+        <span class="blind">생물관</span>
+    </button> 
+    <button class="pack4 pack417" type="button" data-before="417">
+        <span class="num">417</span>
+        <span class="blind">제1사범관</span>
+    </button> 
+    <button class="pack4 pack418" type="button" data-before="418">
+        <span class="num">418</span>
+        <span class="blind">제2교수연구동</span>
+    </button> 
+    <button class="pack4 pack419" type="button" data-before="419">
+        <span class="num">419</span>
+        <span class="blind">금정회관</span>
+    </button> 
+    <button class="pack4 pack420" type="button" data-before="420">
+        <span class="num">420</span>
+        <span class="blind">새벽벌도서관</span>
+    </button> 
+    <button class="pack4 pack421" type="button" data-before="421">
+        <span class="num">421</span>
+        <span class="blind">사회관</span>
+    </button> 
+    <button class="pack4 pack422" type="button" data-before="422">
+        <span class="num">422</span>
+        <span class="blind">성학관</span>
+    </button> 
+    <button class="pack5 pack501" type="button" data-before="501">
+        <span class="num">501</span>
+        <span class="blind">약학연구동</span>
+    </button> 
+    <button class="pack5 pack502" type="button" data-before="502">
+        <span class="num">502</span>
+        <span class="blind">약학관(구관)</span>
+    </button> 
+    <button class="pack5 pack503" type="button" data-before="503">
+        <span class="num">503</span>
+        <span class="blind">약학관(신관)</span>
+    </button> 
+    <button class="pack5 pack505" type="button" data-before="505">
+        <span class="num">505</span>
+        <span class="blind">실험동물센터</span>
+    </button> 
+    <button class="pack5 pack506" type="button" data-before="506">
+        <span class="num">506</span>
+        <span class="blind">효원산학협동관</span>
+    </button> 
+    <button class="pack5 pack507" type="button" data-before="507">
+        <span class="num">507</span>
+        <span class="blind">인덕관</span>
+    </button> 
+    <button class="pack5 pack508" type="button" data-before="508">
+        <span class="num">508</span>
+        <span class="blind">산학협동관</span>
+    </button> 
+    <button class="pack5 pack509" type="button" data-before="509">
+        <span class="num">509</span>
+        <span class="blind">박물관 별관</span>
+    </button> 
+    <button class="pack5 pack510" type="button" data-before="510">
+        <span class="num">510</span>
+        <span class="blind">중앙도서관</span>
+    </button> 
+    <button class="pack5 pack511" type="button" data-before="511">
+        <span class="num">511</span>
+        <span class="blind">간이체육관</span>
+    </button> 
+    <button class="pack5 pack512" type="button" data-before="512">
+        <span class="num">512</span>
+        <span class="blind">테니스장</span>
+    </button> 
+    <button class="pack5 pack513" type="button" data-before="513">
+        <span class="num">513</span>
+        <span class="blind">철골주차장</span>
+    </button> 
+    <button class="pack5 pack514" type="button" data-before="514">
+        <span class="num">514</span>
+        <span class="blind">경영관</span>
+    </button> 
+    <button class="pack5 pack515" type="button" data-before="515">
+        <span class="num">515</span>
+        <span class="blind">중앙도서관 및 정보화본부</span>
+    </button> 
+    <button class="pack5 pack516" type="button" data-before="516">
+        <span class="num">516</span>
+        <span class="blind">경제통상관</span>
+    </button> 
+    <button class="pack6 pack601" type="button" data-before="601">
+        <span class="num">601</span>
+        <span class="blind">예술관</span>
+    </button> 
+    <button class="pack6 pack602" type="button" data-before="602">
+        <span class="num">602</span>
+        <span class="blind">생활환경관</span>
+    </button> 
+    <button class="pack6 pack603" type="button" data-before="603">
+        <span class="num">603</span>
+        <span class="blind">생활환경대실험실습동</span>
+    </button> 
+    <button class="pack6 pack605" type="button" data-before="605">
+        <span class="num">605</span>
+        <span class="blind">학군단</span>
+    </button> 
+    <button class="pack6 pack606" type="button" data-before="606">
+        <span class="num">606</span>
+        <span class="blind">화학관</span>
+    </button> 
+    <button class="pack6 pack607" type="button" data-before="607">
+        <span class="num">607</span>
+        <span class="blind">공동연구소동</span>
+    </button> 
+    <button class="pack6 pack608" type="button" data-before="608">
+        <span class="num">608</span>
+        <span class="blind">제2 법학관</span>
+    </button> 
+    <button class="pack6 pack609 over" type="button" data-before="609">
+        <span class="num">609</span>
+        <span class="blind">법학관</span>
+    </button> 
+    <button class="pack7 pack701" type="button" data-before="701">
+        <span class="num">701</span>
+        <span class="blind">제2 사범관</span>
+    </button> 
+    <button class="pack7 pack702" type="button" data-before="702">
+        <span class="num">702</span>
+        <span class="blind">조소실</span>
+    </button> 
+    <button class="pack7 pack703" type="button" data-before="703">
+        <span class="num">703</span>
+        <span class="blind">미술관</span>
+    </button> 
+    <button class="pack7 pack704" type="button" data-before="704">
+        <span class="num">704</span>
+        <span class="blind">조형관</span>
+    </button> 
+    <button class="pack7 pack705" type="button" data-before="705">
+        <span class="num">705</span>
+        <span class="blind">경암체육관 교수연구동</span>
+    </button> 
+    <button class="pack7 pack706" type="button" data-before="706">
+        <span class="num">706</span>
+        <span class="blind">경암체육관</span>
+    </button> 
+    <button class="pack7 pack707" type="button" data-before="707">
+        <span class="num">707</span>
+        <span class="blind">음악관</span>
+    </button> 
+    <button class="pack7 pack708" type="button" data-before="708">
+        <span class="num">708</span>
+        <span class="blind">학생회관</span>
+    </button> 
+    <button class="pack7 pack709" type="button" data-before="709">
+        <span class="num">709</span>
+        <span class="blind">과학기술연구동</span>
+    </button> 
+    <button class="pack7 pack710" type="button" data-before="710">
+        <span class="num">710</span>
+        <span class="blind">대운동장</span>
+    </button> 
+    <button class="pack7 pack711" type="button" data-before="711">
+        <span class="num">711</span>
+        <span class="blind">효원재</span>
+    </button> 
+    <button class="pack7 pack712" type="button" data-before="712">
+        <span class="num">712</span>
+        <span class="blind">웅비관 A동</span>
+    </button> 
+    <button class="pack7 pack713" type="button" data-before="713">
+        <span class="num">713</span>
+        <span class="blind">웅비관 B동</span>
+    </button> 
+    <button class="pack7 pack714" type="button" data-before="714">
+        <span class="num">714</span>
+        <span class="blind">진리관 관리동</span>
+    </button> 
+    <button class="pack7 pack715" type="button" data-before="715">
+        <span class="num">715</span>
+        <span class="blind">진리관 가동</span>
+    </button> 
+    <button class="pack7 pack716" type="button" data-before="716">
+        <span class="num">716</span>
+        <span class="blind">진리관 나동</span>
+    </button> 
+    <button class="pack7 pack717" type="button" data-before="717">
+        <span class="num">717</span>
+        <span class="blind">진리관 다동</span>
+    </button>
+
+        
+    <div class="landmark landmark1"><span>문창대</span></div>
+    <div class="landmark landmark2"><span>미리내골</span></div>
+    <div class="landmark landmark3"><span>조각공원</span></div>
+    <div class="landmark landmark4"><span>예원정</span></div>
+    <div class="landmark landmark5"><span>웅비의탑</span></div>
+    <div class="landmark landmark6"><span>무지개문</span></div>
+    <div class="gate gate1 ltr"><span>남문</span></div>
+    <div class="gate gate2 ltr"><span>(구)정문</span></div>
+    <div class="gate gate3 btt"><span>정문</span></div>
+    <div class="gate gate4 btt"><span>문창쪽문</span></div>
+    <div class="gate gate5 btt"><span>북문</span></div>
+
+
+
+{% endblock %}

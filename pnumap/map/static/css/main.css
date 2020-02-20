@@ -1,0 +1,153 @@
+body{
+    background: url('../image/pnumap.jfif') no-repeat;
+}   
+
+/* .blind {
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    position:absolute;
+    top:-9999em;
+    left:-9999em;
+    display:block;
+    text-indent:-9999em;
+    font-size:0px;
+    line-height:0;
+} */
+
+button{
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    position: absolute;
+}
+span{
+    line-height: 26px;
+    letter-spacing: -.05em;
+}
+
+
+button.pack1 span {background:#d6181f;color:#fff;border:0}
+	button.pack101 {top:675px;left:257px}
+	button.pack102 {top:679px;left:290px}
+	button.pack103 {top:650px;left:298px}
+	button.pack105 {top:656px;left:337px}
+	button.pack106 {top:642px;left:450px}
+	button.pack107 {top:592px;left:491px}
+	button.pack108 {top:622px;left:533px}
+	button.pack109 {top:625px;left:500px}
+	button.pack110 {top:600px;left:553px}
+	button.pack111 {top:654px;left:508px}
+button.pack2 span {background:#eb572a;color:#fff;border:0}
+	button.pack201 {top:562px;left:279px}
+	button.pack202 {top:521px;left:281px}
+	button.pack203 {top:543px;left:359px}
+	button.pack204 {top:598px;left:384px}
+	button.pack205 {top:505px;left:447px}
+	button.pack206 {top:504px;left:410px}
+	button.pack207 {top:502px;left:490px}
+	button.pack208 {top:507px;left:524px}
+	button.pack209 {top:484px;left:737px}
+	button.pack210 {top:414px;left:724px}
+	button.pack211 {top:406px;left:772px}
+button.pack3 span {background:#ffc900;color:#222;border:0}
+	button.packK08 {top:485px;left:111px}
+	button.pack301 {top:529px;left:147px}
+	button.pack302 {top:535px;left:201px}
+	button.pack303 {top:472px;left:149px}
+	button.pack306 {top:452px;left:317px}
+	button.pack307 {top:404px;left:334px}
+	button.pack308 {top:412px;left:445px}
+	button.pack309 {top:380px;left:435px}
+	button.pack310 {top:441px;left:502px}
+	button.pack311 {top:432px;left:565px}
+	button.pack312 {top:396px;left:542px}
+	button.pack313 {top:411px;left:606px}
+	button.pack314 {top:381px;left:601px}
+	button.pack315 {top:384px;left:662px}
+	button.pack316 {top:365px;left:702px}
+	button.pack317 {top:363px;left:748px}
+	button.pack318 {top:326px;left:724px}
+button.pack4 span {background:#07834d;color:#fff;border:1px solid #0e5234}
+	button.pack401 {top:403px;left:152px}
+	button.pack402 {top:368px;left:121px}
+	button.pack403 {top:394px;left:200px}
+	button.pack405 {top:400px;left:268px}
+	button.pack406 {top:368px;left:265px}
+	button.pack407 {top:358px;left:236px}
+	button.pack408 {top:340px;left:208px}
+	button.pack409 {top:364px;left:310px}
+	button.pack410 {top:330px;left:295px}
+	button.pack411 {top:369px;left:404px}
+	button.pack412 {top:341px;left:414px}
+	button.pack413 {top:339px;left:380px}
+	button.pack414 {top:302px;left:370px}
+	button.pack415 {top:292px;left:400px}
+	button.pack416 {top:336px;left:508px}
+	button.pack417 {top:307px;left:456px}
+	button.pack418 {top:276px;left:466px}
+	button.pack419 {top:281px;left:501px}
+	button.pack420 {top:327px;left:592px}
+	button.pack421 {top:266px;left:592px}
+	button.pack422 {top:289px;left:677px}
+button.pack5 span {background:#4dbcbd;color:#222;border:1px solid #297e7f}
+	button.pack501 {top:299px;left:134px}
+	button.pack502 {top:318px;left:166px}
+	button.pack503 {top:286px;left:163px}
+	button.pack505 {top:301px;left:190px}
+	button.pack506 {top:289px;left:224px}
+	button.pack507 {top:290px;left:256px}
+	button.pack508 {top:252px;left:216px}
+	button.pack509 {top:280px;left:285px}
+	button.pack510 {top:233px;left:366px}
+	button.pack511 {top:224px;left:415px}
+	button.pack512 {top:250px;left:432px}
+	button.pack513 {top:210px;left:438px}
+	button.pack514 {top:204px;left:541px}
+	button.pack515 {top:248px;left:332px}
+	button.pack516 {top:198px;left:474px}
+button.pack6 span {background:#009eef;color:#fff;border:0}
+	button.pack601 {top:240px;left:155px}
+	button.pack602 {top:218px;left:232px}
+	button.pack603 {top:206px;left:263px}
+	button.pack605 {top:204px;left:365px}
+	button.pack606 {top:174px;left:349px}
+	button.pack607 {top:153px;left:423px}
+	button.pack608 {top:140px;left:469px}
+	button.pack609 {top:146px;left:526px}
+button.pack7 span {background:#8048a0;color:#fff;border:0}
+	button.pack701 {top:154px;left:51px}
+	button.pack702 {top:190px;left:189px}
+	button.pack703 {top:153px;left:196px}
+	button.pack704 {top:182px;left:132px}
+	button.pack705 {top:122px;left:114px}
+	button.pack706 {top:108px;left:142px}
+	button.pack707 {top:134px;left:259px}
+	button.pack708 {top:117px;left:325px}
+	button.pack709 {top:117px;left:381px}
+	button.pack710 {top:91px;left:240px}
+	button.pack711 {top:64px;left:378px}
+	button.pack712 {top:95px;left:431px}
+	button.pack713 {top:68px;left:472px}
+	button.pack714 {top:106px;left:499px}
+	button.pack715 {top:86px;left:555px}
+	button.pack716 {top:56px;left:535px}
+	button.pack717 {top:46px;left:508px}
+.landmark {display:block;position:absolute;border-radius:999px;box-sizing:border-box;background:#fff;border:1px solid #666;font-size:11px;padding:0 7px;z-index:1}
+.landmark1 {left:159px;top:363px}
+.landmark2 {left:344px;top:374px}
+.landmark3 {left:480px;top:384px}
+.landmark4 {left:550px;top:303px}
+.landmark5 {left:214px;top:515px}
+.landmark6 {left:166px;top:601px}
+.gate {display:block;position:absolute;width:auto;min-width:44px;border-radius:999px;background:#666;color:#fff;font-size:11px;padding:1px 21px 1px 12px;z-index:1}
+.gate:after {content:"";display:block;position:absolute;width:12px;height:12px;background:url(/_contents/kor/_Img/07Intro/cmap_sprite.png) no-repeat;right:6px;top:50%;margin:-6px 0 0 0}
+.gate.btt:after {background-position:-41px 0px}
+.gate.ltr:after {background-position:-53px 0px}
+.gate.ttb:after {background-position:-65px 0px}
+.gate.rtl:after {background-position:-77px 0px}
+.gate1 {left:74px;top:259px}
+.gate2 {left:174px;top:678px}
+.gate3 {left:411px;top:694px}
+.gate4 {left:561px;top:519px}
+.gate5 {left:655px;top:451px}

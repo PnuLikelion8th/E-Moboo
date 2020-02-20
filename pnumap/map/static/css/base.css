@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* 초기화 */
+html,body{
+    margin:0;
+    padding:0;
+}
+
+/* 링크 데코레이션 none */
+a { text-decoration: none; color:black; }
+a:visited { text-decoration: none; color:black;}
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; } 
+
+/* font */
+@font-face{
+    font-family: 'nanumsquare_R';
+    src: url('../font/NANUMSQUARER.TTF');
+}
+
+* { 
+    font-family: 'nanumsquare_R';
+}
