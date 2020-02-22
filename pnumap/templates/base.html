@@ -20,13 +20,30 @@
 
 
 <body>  
-    <nav></nav>
-
+    <nav>
+        <div class="small_menu_btn" onclick="sidetoggle()">
+            <span class="small_menu_btn_line small_menu_btn_line_01"></span>
+            <span class="small_menu_btn_line small_menu_btn_line_02"></span>
+            <span class="small_menu_btn_line small_menu_btn_line_03"></span>
+        </div>
+    </nav>
+    <section class="small_menu_section">
+        <div class="small_menu_list_container">
+            <div class="small_menu_list">내브에는</div>
+            <div class="small_menu_list">뭘넣을까유</div>
+        </div>
+    </section>
+    <section id="base_container">
     {% block content %}
     {% endblock %}    
+    </section>
+    <footer>
+        <div class="footer_list_container">
+            <div class="footer_list">푸터에는 뭘 넣을까유</div>
+        </div>
+    </footer>
 
-    <footer></footer>
-
+    <script type="text/javascript" src="{% static 'js/nav.js' %}?dt={% now 'Ymd' %}"></script>
 </body>
 </html>
 
