@@ -5,6 +5,6 @@ import json
 
 DEBUG = False 
 
-ALLOWED_HOSTS = ['pnumap.com','.amazonaws.com']
+ALLOWED_HOSTS = ['pnumap.com','.amazonaws.com','52.78.198.136']
 
 WSGI_APPLICATION = 'pnumap.wsgi'
