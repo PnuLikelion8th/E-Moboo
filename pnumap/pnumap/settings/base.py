@@ -13,7 +13,17 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+CONFIG_SECRET_DIR = os.path.join(BASE_DIR, '.config_secret')
+CONFIG_SECRET_BASE_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_base.json')
+CONFIG_SECRET_DEVELOPMENT_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_development.json')
+
+CONFIG_SECRET_PRODUCTION_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_production.json')
+
+# config_secret_base = json.loads(open(CONFIG_SECRET_BASE_FILE).read())
+
+# SECRET_KEY = config_secret_base['django']['secret_key']
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,9 +33,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'd4n+4c*rlwtj@-u!kzmu9cag!pzsh$&9lkforaxg6j07v&8!mf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -55,7 +64,7 @@ ROOT_URLCONF = 'pnumap.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
