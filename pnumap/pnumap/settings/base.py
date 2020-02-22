@@ -35,7 +35,6 @@ SECRET_KEY = config_secret_base['django']['secret_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-# ALLOWED_HOSTS = []
 
 
 # Application definition
