@@ -19,9 +19,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 CONFIG_SECRET_DIR = os.path.join(BASE_DIR, '.config_secret')
 CONFIG_SECRET_BASE_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_base.json')
-# CONFIG_SECRET_DEVELOPMENT_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_development.json')
+CONFIG_SECRET_DEVELOP_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_develop.json')
 
-# CONFIG_SECRET_PRODUCTION_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_production.json')
+CONFIG_SECRET_DEPLOY_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_deploy.json')
 
 config_secret_base = json.loads(open(CONFIG_SECRET_BASE_FILE).read())
 
