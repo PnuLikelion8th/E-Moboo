@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import json
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -21,16 +23,15 @@ CONFIG_SECRET_DEVELOPMENT_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_devel
 
 CONFIG_SECRET_PRODUCTION_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_production.json')
 
-# config_secret_base = json.loads(open(CONFIG_SECRET_BASE_FILE).read())
+config_secret_base = json.loads(open(CONFIG_SECRET_BASE_FILE).read())
 
-# SECRET_KEY = config_secret_base['django']['secret_key']
+SECRET_KEY = config_secret_base['django']['secret_key']
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'd4n+4c*rlwtj@-u!kzmu9cag!pzsh$&9lkforaxg6j07v&8!mf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
