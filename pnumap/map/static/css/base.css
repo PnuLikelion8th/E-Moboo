@@ -33,16 +33,17 @@ nav{
     position: sticky;
     z-index: 500;
     top:10px;
-    width: 90%;
+    width: 96vw;
+    margin: 10px 2vw;
     height: 60px;
-    margin: 10px auto;
+    /* margin: 10px auto; */
     box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
     background: #FED047;
 }
 
     .small_menu_btn {
         position: absolute;
-        top: 2vh;
+        top: 17px;
         z-index: 101;
         width: 35px;
         cursor: pointer;
@@ -120,7 +121,7 @@ nav{
         display : none;
         text-decoration: none;
         position: absolute;
-        width : 50vw;
+        width : 25vw;
         left:0;
         top:0;
         text-align: center;
@@ -130,10 +131,16 @@ nav{
         z-index: 100;
         overflow: hidden;
     }
+    @media(max-width:849px){
+        .small_menu_section{
+            width:50vw;
+        }
+    }
 
     .small_menu_section_active{
         margin-top: 70px;
         margin-left: 2vw;
+        height: 900px;
         background:#F16522;
         display:inline-block;
         animation-iteration-count: 1;
@@ -168,13 +175,7 @@ nav{
         margin: 10px;
     }    
             
-    @media(max-width: 849px){
-        nav{
-            width: 96vw;
-            margin: 10px 2vw;
-        }
-    }
-
+   
 #base_container{
     width: 849px;
     height: 798px;
@@ -192,7 +193,7 @@ nav{
 
 footer{
     width:100vw;
-    height: 100px;
+    height: 150px;
     background:#642340;
     position: relative;
     z-index: 100;
