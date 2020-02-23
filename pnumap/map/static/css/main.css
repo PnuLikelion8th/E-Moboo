@@ -16,22 +16,32 @@
 	display: none;
 }
 .blind_active{
-	display:block;
+	border-radius: 20px;
 	position: absolute;
 	bottom:20px;
 	right: -58px;
 	width: 150px;
-	height: 150px;
+	height: 88px;
 	padding-top: 10px;
 	font-size: 0.8rem;
 	font-weight: 900;
 	color: white;
 	z-index: 99;
-	border-radius: 20px;
 	box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
-	/* border: 2px solid white; */
 	cursor: pointer;
+	animation-iteration-count: 1;
+	animation-duration: 0.7s;
+	animation-name: blind_toggle;
+	
 }
+	@keyframes blind_toggle {
+		from{
+			opacity: 0;
+		}
+		to{
+			opacity: 1;
+		}
+	} 
 
 
 

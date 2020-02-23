@@ -48,7 +48,7 @@ nav{
     .small_menu_btn {
         position: absolute;
         top: 17px;
-        z-index: 101;
+        z-index: 105;
         width: 35px;
         cursor: pointer;
         background: none;
@@ -62,7 +62,7 @@ nav{
         background: #ad3100;
         margin-top:4px;
         margin-bottom:4px;
-                z-index: 101;
+        z-index: 105;
 
     }
     
@@ -135,7 +135,7 @@ nav{
         height: 100%;
         background: white;
         transform: matrix(1, 0, 0, 1, -400, 0);
-        z-index: 100;
+        z-index: 103;
         overflow: hidden;
         border:1px solid red;
     }
@@ -188,6 +188,7 @@ nav{
     height: 798px;
     position: relative;
     margin: 0 auto;
+    margin-top: 59px;
 }
 
 /* .gnb_logo{
@@ -227,7 +228,8 @@ nav{
 @media(max-width: 849px){
     #base_container{
         width: 100vw;
-        overflow: scroll;
+        overflow-x: scroll;
+        overflow-y:visible;
     }
 }
 
@@ -237,7 +239,7 @@ footer{
     height: 159px;
     background:#642340;
     position: relative;
-    z-index: 100;
+    z-index: 104;
     /* padding-top: 30px; */
 }
 
