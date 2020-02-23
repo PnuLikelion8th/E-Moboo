@@ -11,17 +11,26 @@
     height: 798px;
 }
 
-.blind {
-    width:1px;
-    height:1px;
-    overflow:hidden;
-    position:absolute;
-    top:-9999em;
-    left:-9999em;
-    display:block;
-    text-indent:-9999em;
-    font-size:0px;
-    line-height:0;
+
+.blind{
+	display: none;
+}
+.blind_active{
+	display:block;
+	position: absolute;
+	bottom:20px;
+	right: -58px;
+	width: 150px;
+	height: 150px;
+	padding-top: 10px;
+	font-size: 0.8rem;
+	font-weight: 900;
+	color: white;
+	z-index: 99;
+	border-radius: 20px;
+	box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+	/* border: 2px solid white; */
+	cursor: pointer;
 }
 
 
@@ -139,12 +148,15 @@ button.pack7 span {background:#8048a0;color:#fff;border:0}
 .landmark4 {left:550px;top:303px}
 .landmark5 {left:214px;top:515px}
 .landmark6 {left:166px;top:601px}
-.gate {display:block;position:absolute;width:auto;min-width:44px;border-radius:999px;background:#666;color:#fff;font-size:11px;padding:1px 21px 1px 12px;z-index:1}
-.gate:after {content:"";display:block;position:absolute;width:12px;height:12px;background:url("메롱") no-repeat;right:6px;top:50%;margin:-6px 0 0 0}
-.gate.btt:after {background-position:-41px 0px}
-.gate.ltr:after {background-position:-53px 0px}
-.gate.ttb:after {background-position:-65px 0px}
-.gate.rtl:after {background-position:-77px 0px}
+.gate {display:block;
+	position:absolute;
+	width:auto;
+	border-radius:999px;
+	background:#666;
+	color:#fff;
+	font-size:11px;
+	padding:1px 12px;
+	z-index:1}
 .gate1 {left:74px;top:259px}
 .gate2 {left:174px;top:678px}
 .gate3 {left:411px;top:694px}
@@ -154,12 +166,16 @@ button.pack7 span {background:#8048a0;color:#fff;border:0}
 
 
 button{
-    border-radius: 10px;
+    border-radius: 190px;
     outline: 0;
-    border: 0;
-    position: absolute;
+	border: 0;
+	padding:0;
+	margin: 0;
+	position: absolute;
+	cursor: pointer;
 }
-span{
-    line-height: 26px;
-    letter-spacing: -.05em;
+.num{
+	box-sizing: border-box;
+	border-radius: 999px;
+	padding:3px;
 }
