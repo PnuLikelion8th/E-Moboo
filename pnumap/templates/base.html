@@ -26,11 +26,23 @@
             <span class="small_menu_btn_line small_menu_btn_line_02"></span>
             <span class="small_menu_btn_line small_menu_btn_line_03"></span>
         </div>
+        <div class="gnb_logo">PNU MAP</div>
     </nav>
     <section class="small_menu_section">
         <div class="small_menu_list_container">
-            <div class="small_menu_list">내브에는</div>
-            <div class="small_menu_list">뭘넣을까유</div>
+            <form class="gnb_q_form" method = "get">
+                <input id="gnb_q" type="search" name="q">
+                <label for ="gnb_q" >
+                    <img class="search_icon" src="{% static 'image/돋보기.png' %}" alt="검색">
+                </label>
+            </form>
+            <div class="gnb_q_result">
+                검색 결과가 없습니다.
+            </div>
+            <!-- <div class="small_menu_list">검색</div> -->
+            
+            <!-- <div class="small_menu_list">내브에는</div> -->
+            <!-- <div class="small_menu_list">뭘넣을까유</div> -->
         </div>
     </section>
     <section id="base_container">
