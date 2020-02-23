@@ -22,28 +22,38 @@ a:hover, a:active { text-decoration: none; }
 * { 
     font-family: 'nanumsquare_R';
 }
-
+.logo{
+    width:100px;
+    position: absolute;
+    top: 10px;
+    margin: 0 auto;
+    left:50%; transform:translateX(-50%);
+}
 nav{
+    position: sticky;
+    z-index: 500;
+    top:10px;
     width: 90%;
-    height: 7vh;
-    margin: 1vh auto;
+    height: 60px;
+    margin: 10px auto;
     box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    background: #FED047;
 }
 
     .small_menu_btn {
         position: absolute;
-        top: 3vh;
+        top: 2vh;
         z-index: 101;
         width: 35px;
         cursor: pointer;
         background: none;
-        margin-left: 2vh;
+        margin-left: 5vw;
     } 
     .small_menu_btn_line {
         display: block;
         width: 100%;
         height: 3px;
-        background: black;
+        background: #ad3100;
         margin-top:4px;
         margin-bottom:4px;
     }
@@ -54,7 +64,7 @@ nav{
     }
     
     .small_menu_btn_line_01_active{
-        background: black;
+        background: #ad3100;
         animation-iteration-count: 1;
         animation-duration: 0.5s;
         animation-name: change_line1;
@@ -63,7 +73,7 @@ nav{
         }
     .small_menu_btn_line_02_active{
             
-        background: black;
+        background: #ad3100;
         animation-iteration-count: 1;
         animation-duration: 0.5s;
         animation-name: change_line2;
@@ -71,7 +81,7 @@ nav{
         animation-fill-mode : forwards;
         }
     .small_menu_btn_line_03_active{
-        background: black;
+        background: #ad3100;
         animation-iteration-count: 1;
         animation-duration: 0.5s;
         animation-name: change_line3;
@@ -110,7 +120,7 @@ nav{
         display : none;
         text-decoration: none;
         position: absolute;
-        width : 50vh;
+        width : 50vw;
         left:0;
         top:0;
         text-align: center;
@@ -122,6 +132,9 @@ nav{
     }
 
     .small_menu_section_active{
+        margin-top: 70px;
+        margin-left: 2vw;
+        background:#F16522;
         display:inline-block;
         animation-iteration-count: 1;
         animation-duration: 0.2s;
@@ -157,37 +170,36 @@ nav{
             
     @media(max-width: 849px){
         nav{
-            width: 799px;
-            margin: 1vh 25px;
+            width: 96vw;
+            margin: 10px 2vw;
         }
     }
 
 #base_container{
     width: 849px;
     height: 798px;
-    background: url('../image/pnumap.jfif') no-repeat;
-    border: 1px red solid;
     position: relative;
     margin: 0 auto;
 }
 
-
-
-
-
-
-footer{
-    width:100%;
-    height: 100px;
-    background:#dddddd;
-}
 @media(max-width: 849px){
-    footer{
-        width: 849px;
+    #base_container{
+        width: 100vw;
+        overflow: scroll;
     }
 }
 
-footer_list_container{
+
+footer{
+    width:100vw;
+    height: 100px;
+    background:#642340;
+    position: relative;
+    z-index: 100;
+}
+
+.footer_list_container{
     width:100%;
-    height: 100%;
+    height:100%;
+    color: white;
 }
