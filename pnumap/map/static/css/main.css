@@ -4,6 +4,13 @@
 	background-size: cover;
 }    */
 
+#main_img{
+	position: absolute;
+	top: 0;
+	width: 849px;
+    height: 798px;
+}
+
 .blind {
     width:1px;
     height:1px;
