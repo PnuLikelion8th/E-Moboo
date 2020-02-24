@@ -139,3 +139,9 @@ def building_info(request,building_id):
     # pass
     # return r('main')
     return render(request, 'main.html', {'building_data':"hello"})
+
+
+
+
+def building_info_detail(request, lec_id):
+    return render(request, 'main.html' , {'building_data':"hello"})
