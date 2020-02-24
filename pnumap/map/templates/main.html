@@ -15,9 +15,13 @@
 {% block content %}
     <img id="main_img" src="{% static 'image/pnumap.jfif' %}">
     <input type="text" id="focus">
+    {% if building_data %}
     <div class="building_info_section">
-        {{building_data}}
+        <img onclick="modal_hidden();" src="{% static 'image/xxx.png' %}" class="x_btn">
+        <div class="building_info_container">{{building_data}}</div>
+        
     </div>
+    {% endif %}
     <button class="pack1 pack101" type="button" data-before="101">
         <span class="num">101</span>
         <span class="blind">MEMS / NANO 클린룸동</span>

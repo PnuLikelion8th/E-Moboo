@@ -233,3 +233,38 @@ button.pack206>.blind_active{
 button.pack410>.blind_active{
 	font-size: 0.67rem;
 }
+
+.building_info_section{
+	position: absolute;
+	margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+	width:320px;
+	height: 500px;
+	background-color: #f16512;
+	color:white;
+	border-radius: 40px;
+	opacity: 0.9;
+	z-index:101;
+}
+
+.building_info_container{
+	border: 1px white solid;
+	margin: 20px auto;
+	width: 280px;
+	height: 460px;
+	overflow: scroll;
+	word-break: break-all;
+	
+	
+}
+
+
+.x_btn{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 23px;
+}
