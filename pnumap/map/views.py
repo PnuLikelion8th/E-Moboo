@@ -168,8 +168,6 @@ def building_info(request,building_id):
     return render(request, 'main.html', {'building_data':building_data})
 
 
-
-
 def building_info_detail(request, lec_id):
     data = TempCrawlData.objects.get(id=lec_id)
     return render(request, 'main.html' , {'lec_data':data})
