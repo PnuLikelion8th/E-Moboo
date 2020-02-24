@@ -34,3 +34,5 @@ class ReviewData(models.Model):
     
     def __str__(self):
         return self.coursename
+
+class CourseData

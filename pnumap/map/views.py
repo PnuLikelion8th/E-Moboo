@@ -14,6 +14,70 @@ from .models import Blog, ReviewData, Course, Professor
 # from bs4 import BeautifulSoup
 import time
 
+<<<<<<< HEAD
+def coursedata(request):
+    browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
+    browser.get('https://everytime.kr/login')
+    time.sleep(1)
+
+    login = browser.find_element_by_name('userid')
+    login.send_keys('etcheef')
+    login = browser.find_element_by_name('password')
+    login.send_keys('Rimee202=')
+    login.send_keys(Keys.RETURN)
+    time.sleep(1)
+    browser.find_element_by_css_selector("#menu > li:nth-child(2) > a").click()
+    time.sleep(1)
+    browser.find_element_by_xpath("//*[@id='container']/ul/li[1]").click()
+    browser.find_element_by_css_selector("#subjects")
+    time.sleep(5)
+    close = browser.find_element_by_xpath("//*[@id='sheet']/ul/li[3]/a").click()
+
+    time.sleep(2)
+    while True:
+        trs = browser.find_elements_by_css_selector("#subjects > div.list > table > tbody > tr")
+        browser.execute_script("arguments[0].scrollIntoView(true);", trs[-1])
+        for tr in trs:
+            tds = browser.find_elements_by_css_selector('#subjects > div.list > table > tbody > tr > td')
+            i=0
+            for td in tds:
+                print(td.text)
+    return render(request)
+
+def reviewdata(request):
+    browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
+    browser.get('https://everytime.kr/login')
+    time.sleep(1)
+
+    login = browser.find_element_by_name('userid')
+    login.send_keys('etcheef')
+    login = browser.find_element_by_name('password')
+    login.send_keys('Rimee202=')
+    login.send_keys(Keys.RETURN)
+
+    browser.find_element_by_css_selector("#menu > li:nth-child(3) > a").click()
+    time.sleep(2)
+
+    SCROLL_PAUSE_TIME = 0.5
+    last_height = browser.execute_script("return document.body.scrollHeight")
+    while True:
+        browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(SCROLL_PAUSE_TIME)
+        new_height = browser.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            break
+        last_height = new_height
+
+    reviews = browser.find_elements_by_class_name("article")
+    time.sleep(1)
+    i = 0
+
+    while i < len(reviews):
+        reviews[i].send_keys(Keys.CONTROL + '\n')
+        browser.switch_to.window(browser.window_handles[1])
+        wait = WebDriverWait(browser, 10)
+        wait.until(EC.presence_of_element_located((By.ID, "container")))
+=======
 
 # Create your views here.
 def main(request):
@@ -53,6 +117,7 @@ def main(request):
 #         browser.switch_to.window(browser.window_handles[1])
 #         wait = WebDriverWait(browser, 10)
 #         wait.until(EC.presence_of_element_located((By.ID, "container")))
+>>>>>>> 0f8ed8062cc4bc3adeffd9dec3f351fe876e47c2
     
 #         #여기서부터 정보 가져옴
 #         req = browser.page_source
