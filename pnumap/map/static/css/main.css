@@ -11,6 +11,15 @@
     height: 798px;
 }
 
+#focus{
+	position: absolute;
+	top: 430px;
+	left: 404px;
+	display: block;
+	width:0;
+	opacity: 0;
+}
+
 
 .blind{
 	display: none;
@@ -21,7 +30,7 @@
 	bottom:20px;
 	right: -58px;
 	width: 150px;
-	height: 88px;
+	height: 66px;
 	padding-top: 10px;
 	font-size: 0.8rem;
 	font-weight: 900;
@@ -32,7 +41,7 @@
 	animation-iteration-count: 1;
 	animation-duration: 0.7s;
 	animation-name: blind_toggle;
-	
+
 }
 	@keyframes blind_toggle {
 		from{
@@ -42,7 +51,6 @@
 			opacity: 1;
 		}
 	} 
-
 
 
 button.pack1 span {background:#d6181f;color:#fff;border:0}
@@ -188,4 +196,75 @@ button{
 	box-sizing: border-box;
 	border-radius: 999px;
 	padding:3px;
+}
+
+
+.score_container{
+	font-size:1.5rem;
+}
+
+
+.route_course{
+	border: 1px red solid;
+	position: absolute;
+	background: green;
+	top: 300px;
+	left: 300px;
+	z-index: 104;
+}
+
+
+
+.coursebtn{
+	display: block;
+	padding: 4px;
+	margin: 8px;
+	border: 2px solid white;
+	border-radius: 5px;
+	color: white;
+	background: rgba(0,0,0,0.6);
+}
+
+
+button.pack206>.blind_active{
+	font-size: 0.75rem;
+}
+
+button.pack410>.blind_active{
+	font-size: 0.67rem;
+}
+
+.building_info_section{
+	position: absolute;
+	margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+	width:320px;
+	height: 500px;
+	background-color: #f16512;
+	color:white;
+	border-radius: 40px;
+	opacity: 0.9;
+	z-index:101;
+}
+
+.building_info_container{
+	border: 1px white solid;
+	margin: 20px auto;
+	width: 280px;
+	height: 460px;
+	overflow: scroll;
+	word-break: break-all;
+	
+	
+}
+
+
+.x_btn{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 23px;
 }

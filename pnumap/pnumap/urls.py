@@ -21,11 +21,17 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main, name="main"),
     path('search/',views.search, name="search"),
+    path('score/<str:flag>',views.score, name="score"),
     path('write/', views.write, name="write"),
     path('index/', views.index, name="index"),
     path('detail/<int:building_id>', views.detail, name="detail"),
     path('update/<int:building_id>', views.update, name="update"),
     path('delete/<int:building_id>', views.delete, name="delete"),
+<<<<<<< HEAD
     path('reviewparse/', views.reviewdata, name="reviewdata")
     path('courseparse/', views.coursedata, name="coursedata")
+=======
+    path('building/<int:building_id>', views.building_info, name="building"),
+    # path('parse/', views.reviewdata, name="reviewdata")
+>>>>>>> 0f8ed8062cc4bc3adeffd9dec3f351fe876e47c2
 ]

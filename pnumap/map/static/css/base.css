@@ -33,7 +33,6 @@ nav{
     position: sticky;
     z-index: 100;
     top:10px;
-    width: 96vw;
     margin: 10px 2vw;
     height: 60px;
     /* margin: 10px auto; */
@@ -139,11 +138,7 @@ nav{
         overflow: hidden;
         /* border:1px solid red; */
     }
-    @media(max-width:849px){
-        .small_menu_section{
-            width:50vw;
-        }
-    }
+  
 
     .small_menu_section_active{
         margin-top: 70px;
@@ -173,22 +168,44 @@ nav{
         /* border: 1px solid gr een; */
         width: 100%;
         height: 100%;
-        padding-top: 10vh;
+        padding-top: 30px;
         /* padding: 9%; */
 
+    }
+    .search_cate{
+        border:1px solid red;
+        padding:10px 20px;
+        font-weight: 800;
+        text-align: left;
+    }
+    .search_cate > input {
+        display: none;
+    }
+    .display_cate{
+        visibility: hidden;
+        display: inline-block;
+    }
+    input[class="search_type"]:checked + .display_cate{
+        visibility: visible;
     }
     .small_menu_list{
         border: 1px solid blue;
         margin: 10px;
     }    
             
-   
+#base_container_wrapper{
+    /* border:3px solid red; */
+    padding-top:60px;
+    box-sizing:border-box
+}
 #base_container{
     width: 849px;
     height: 798px;
     position: relative;
     margin: 0 auto;
-    margin-top: 59px;
+    /* padding-top:59px; */
+    box-sizing: border-box;
+    /* margin-top: 59px; */
 }
 
 /* .gnb_logo{
@@ -208,30 +225,44 @@ nav{
     height:40px;
     margin-bottom: 30px;
 }
-
-#gnb_q{
+.building_form, .course_form{
+    display: none;
+}
+#gnb_q_building,#gnb_q_course{
     border:none;
     background: none;
     outline: none;
     box-sizing: border-box;
     border-bottom:1.5px solid #ad3100;
     height: 100%;
-    width:60%;
+    width:70%;
+    font-size:0.65rem;
+    padding-left:10px;
+    box-sizing: border-box;
+}
+::placeholder{
+    color:#777;
 }
 .gnb_q_form .search_icon {
     height:20px;
 }
+  
 @media(max-width: 849px){
+    .small_menu_section{
+        width:50vw;
+    }
+    #base_container_wrapper{
+    overflow:scroll;
+    }
     #base_container{
-        width: 100vw;
-        overflow-x: scroll;
-        overflow-y:visible;
+        width: 100%;
+        /* overflow-x: scroll; */
     }
 }
 
 
 footer{
-    width:100vw;
+    width:100%;
     height: 159px;
     background:#642340;
     position: relative;
@@ -272,4 +303,10 @@ footer{
         margin-right: 30px;
         margin-top:11px;
     }
+}
+
+
+
+.show{
+    display: inline-block;
 }

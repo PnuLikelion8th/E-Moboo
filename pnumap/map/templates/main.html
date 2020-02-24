@@ -7,14 +7,21 @@
 
 {%block extra_head%}
     <meta name="description" content="부산대학교 강의평가와 캠퍼스맵 - Likelion8th" />   
-    <link rel="Stylesheet" type="text/css" href="{% static 'css/main.css' %}?dt={% now 'Ymd' %}">
+    <link rel="Stylesheet" type="text/css" href="{% static 'css/main.css' %}?dt={% now 'U' %}">
 {%endblock%}
 
 
 
 {% block content %}
     <img id="main_img" src="{% static 'image/pnumap.jfif' %}">
-
+    <input type="text" id="focus">
+    {% if building_data %}
+    <div class="building_info_section">
+        <img onclick="modal_hidden();" src="{% static 'image/xxx.png' %}" class="x_btn">
+        <div class="building_info_container">{{building_data}}</div>
+        
+    </div>
+    {% endif %}
     <button class="pack1 pack101" type="button" data-before="101">
         <span class="num">101</span>
         <span class="blind">MEMS / NANO 클린룸동</span>
@@ -425,5 +432,8 @@
     <div class="gate gate4 btt"><span>문창쪽문</span></div>
     <div class="gate gate5 btt"><span>북문</span></div>
 
-    <script type="text/javascript" src="{% static 'js/main.js' %}?dt={% now 'Ymd' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}?dt={% now 'U' %}"></script>
+    <script type="text/javascript" src="{% static 'js/search.js' %}?dt={% now 'U' %}"></script>
+    <script type="text/javascript" src="{% static 'js/score.js' %}?dt={% now 'U' %}"></script>
+
 {% endblock %}
