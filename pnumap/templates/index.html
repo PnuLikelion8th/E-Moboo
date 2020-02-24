@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>여긴목록</h1>
+    {%for i in buildings%}
+        <a href = "{%url 'detail' i.id%}">{{i.title}}<br></a>
+        {{i.body}}<br>
+
+        <a href = "{%url 'update' i.id %}">수정</a>
+        <a href = "{%url 'delete' i.id %}">삭제</a>
+        <hr>
+    {%endfor%}
+</body>
+</html>
