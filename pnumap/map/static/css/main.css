@@ -188,3 +188,8 @@ button{
 	border-radius: 999px;
 	padding:3px;
 }
+
+
+.score_container{
+	font-size:1.5rem;
+}

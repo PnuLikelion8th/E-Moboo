@@ -13,6 +13,15 @@ def search(request):
     context={"msg": "hello chihun"}
     return HttpResponse(json.dumps(context), content_type='application/json')
 
+def score(request,flag):
+    print(flag)
+    if flag == "score_up":
+        context ={'msg': 'up'}
+    else:
+        context ={'msg': 'down'}
+    return HttpResponse(json.dumps(context), content_type='application/json')
+
+
 def index(request):
     buildings = Blog.objects.all()
     return render(request, 'index.html', {'buildings':buildings})
