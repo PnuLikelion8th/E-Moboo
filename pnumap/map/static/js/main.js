@@ -39,3 +39,9 @@ for(let i=0; i < btn.length; i++){
   
 }
 
+
+
+
+const modal_hidden = () => {
+    const modal = document.querySelector('.building_info_section').style.display="none";
+}

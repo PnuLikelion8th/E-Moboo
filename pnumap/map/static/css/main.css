@@ -233,3 +233,69 @@ button.pack206>.blind_active{
 button.pack410>.blind_active{
 	font-size: 0.67rem;
 }
+
+.building_info_section{
+	position: absolute;
+	margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+	width:320px;
+	height: 500px;
+	background-color: #f16512;
+	color:white;
+	border-radius: 40px;
+	opacity: 0.9;
+	z-index:101;
+}
+
+.building_info_container{
+	/* border: 1px white solid; */
+	margin: 20px auto;
+	margin-top: 50px;
+	width: 280px;
+	height: 420px;
+	overflow-y: scroll;
+	word-break: break-all;
+	
+
+}
+
+
+.x_btn{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 23px;
+	cursor: pointer;
+}
+
+/* 스크롤 바 css */
+::-webkit-scrollbar {
+    width: 2px;  /* 세로축 스크롤바 길이 */
+    height: 20px;  /* 가로축 스크롤바 길이 */
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: #f16512;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #f16512;
+  }
+
+
+.b_i_title{
+	font-weight: 900;
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.b_i_list_container{
+	color: white;
+	border: white solid 1px;
+	margin-bottom: 5px;
+	padding: 10px;
+	line-height: 26px;
+	border-radius: 3px;
+}

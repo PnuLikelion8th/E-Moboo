@@ -4,7 +4,7 @@ from .models import Blog
 from django.http import HttpResponse, JsonResponse
 import json
 
-from .models import Blog, ReviewData, Course, Professor
+from .models import Blog, ReviewData, Course, Professor, TempCrawlData
 # from selenium import webdriver
 # from selenium.webdriver.common.keys import Keys
 # from selenium.webdriver.chrome.options import Options
@@ -12,13 +12,41 @@ from .models import Blog, ReviewData, Course, Professor
 # from selenium.webdriver.support import expected_conditions as EC
 # from selenium.webdriver.common.by import By
 # from bs4 import BeautifulSoup
-import time
+# import time
 
+# def coursedata(request):
+#     browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
+#     browser.get('https://everytime.kr/login')
+#     time.sleep(1)
 
-# Create your views here.
-def main(request):
-    return render(request, "main.html")
+#     login = browser.find_element_by_name('userid')
+#     login.send_keys('etcheef')
+#     login = browser.find_element_by_name('password')
+#     login.send_keys('Rimee202=')
+#     login.send_keys(Keys.RETURN)
+#     time.sleep(1)
+#     browser.find_element_by_css_selector("#menu > li:nth-child(2) > a").click()
+#     time.sleep(1)
+#     browser.find_element_by_xpath("//*[@id='container']/ul/li[1]").click()
+#     browser.find_element_by_css_selector("#subjects")
+#     time.sleep(5)
+#     close = browser.find_element_by_xpath("//*[@id='sheet']/ul/li[3]/a").click()
 
+#     time.sleep(2)
+#     temp_list = list()
+#     for i in range(20):
+#         trs = browser.find_elements_by_css_selector("#subjects > div.list > table > tbody > tr")
+#         browser.execute_script("arguments[0].scrollIntoView(true);", trs[-1])
+
+#     for tr in trs[:100]:
+#         # print(tr.text)
+#         temp_list.append((tr.text).split(" "))
+    
+#     del temp_list[0][0]
+#     for i in temp_list:
+#         print(i)
+#         TempCrawlData.objects.create(buildingnum = i[8], profname = i[5], coursename= i[2])
+#     return redirect('main')
 
 # def reviewdata(request):
 #     browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
@@ -139,3 +167,9 @@ def building_info(request,building_id):
     # pass
     # return r('main')
     return render(request, 'main.html', {'building_data':"hello"})
+
+
+
+
+def building_info_detail(request, lec_id):
+    return render(request, 'main.html' , {'building_data':"hello"})
