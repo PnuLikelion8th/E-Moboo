@@ -23,28 +23,13 @@
                 강의 세부정보
             </div>
             <div class="b_i_list_container">
-                <div class="b_i_list">강좌명 : </div>
-                <div class="b_i_list">교수명 : </div>
+                <div class="b_i_list">강좌명 : {{lec_data.coursename}} </div>
+                <div class="b_i_list">교수명 : {{lec_data.profname}} </div>
                 <div class="b_i_list">폼이나 업다운 넣는 곳</div>
             </div>
-        
-            <a href="#">
-                <div class="b_i_list_container">
-                    <div class="b_i_list">강좌명 : </div>
-                    <div class="b_i_list">교수명 : </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="b_i_list_container">
-                    <div class="b_i_list">강좌명 : </div>
-                    <div class="b_i_list">교수명 : </div>
-                </div>
-            </a>
-
         </div>
         
     </div>
-
 
     {% elif building_data %}
     <div class="building_info_section">
@@ -53,25 +38,14 @@
             <div class="b_i_title">
                 개설 강좌
             </div>
-            <a href="#">
+            {% for i in building_data %}
+            <a href="{% url 'lec_detail' i.id %}">
                 <div class="b_i_list_container">
-                    <div class="b_i_list">강좌명 : </div>
-                    <div class="b_i_list">교수명 : </div>
+                    <div class="b_i_list">강좌명 : {{i.coursename}}</div>
+                    <div class="b_i_list">교수명 : {{i.profname}}</div>
                 </div>
             </a>
-            <a href="#">
-                <div class="b_i_list_container">
-                    <div class="b_i_list">강좌명 : </div>
-                    <div class="b_i_list">교수명 : </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="b_i_list_container">
-                    <div class="b_i_list">강좌명 : </div>
-                    <div class="b_i_list">교수명 : </div>
-                </div>
-            </a>
-
+            {% endfor %}
         </div>
         
     </div>
