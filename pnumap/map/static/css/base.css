@@ -168,9 +168,25 @@ nav{
         /* border: 1px solid gr een; */
         width: 100%;
         height: 100%;
-        padding-top: 10vh;
+        padding-top: 30px;
         /* padding: 9%; */
 
+    }
+    .search_cate{
+        border:1px solid red;
+        padding:10px 20px;
+        font-weight: 800;
+        text-align: left;
+    }
+    .search_cate > input {
+        display: none;
+    }
+    .display_cate{
+        visibility: hidden;
+        display: inline-block;
+    }
+    input[class="search_type"]:checked + .display_cate{
+        visibility: visible;
     }
     .small_menu_list{
         border: 1px solid blue;
@@ -209,15 +225,23 @@ nav{
     height:40px;
     margin-bottom: 30px;
 }
-
-#gnb_q{
+.building_form, .course_form{
+    display: none;
+}
+#gnb_q_building,#gnb_q_course{
     border:none;
     background: none;
     outline: none;
     box-sizing: border-box;
     border-bottom:1.5px solid #ad3100;
     height: 100%;
-    width:60%;
+    width:70%;
+    font-size:0.65rem;
+    padding-left:10px;
+    box-sizing: border-box;
+}
+::placeholder{
+    color:#777;
 }
 .gnb_q_form .search_icon {
     height:20px;
@@ -279,4 +303,10 @@ footer{
         margin-right: 30px;
         margin-top:11px;
     }
+}
+
+
+
+.show{
+    display: inline-block;
 }
