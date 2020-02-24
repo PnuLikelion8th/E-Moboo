@@ -68,7 +68,12 @@ def reviewdata():
     return result
 
 def main(request):
-    return render(request, 'main.html')
+    return render(request, "main.html")
+
+
+
+def search(request):
+    return redner(request,"main.html")
 
 def index(request):
     buildings = Blog.objects.all()
