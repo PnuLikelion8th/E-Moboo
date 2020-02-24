@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BlogForm
-from .models import Blog
+from .models import Blog, TempCrawlData
 from django.http import HttpResponse, JsonResponse
 import json
 
@@ -163,13 +163,13 @@ def delete(request,building_id):
 
 
 def building_info(request,building_id):
-    # Somedata.objects.filter(building__endswith=building_id)
-    # pass
-    # return r('main')
-    return render(request, 'main.html', {'building_data':"hello"})
+    dataset = TempCrawlData.objects.filter(buildingnum__contains='-')
+    building_data = dataset.filter(buildingnum__startswith=building_id)
+    return render(request, 'main.html', {'building_data':building_data})
 
 
 
 
 def building_info_detail(request, lec_id):
-    return render(request, 'main.html' , {'building_data':"hello"})
+    data = TempCrawlData.objects.get(id=lec_id)
+    return render(request, 'main.html' , {'lec_data':data})
