@@ -26,19 +26,18 @@ close = browser.find_element_by_xpath("//*[@id='sheet']/ul/li[3]/a").click()
 
 time.sleep(2)
 total_list= list()
-while True:
+for i in range(5):
     trs = browser.find_elements_by_css_selector("#subjects > div.list > table > tbody > tr")
     browser.execute_script("arguments[0].scrollIntoView(true);", trs[-1])
 
-    for tr in trs:
-        # print(tr.text)
-        total_list.append((tr.text).split(" "))
-        print("*"*50)
-        print(total_list)
-        print("*"*50)
-
-
-        total_list[0][0].remove()
+for tr in trs[:100]:
+    # print(tr.text)
+    total_list.append((tr.text).split(" "))
+    
+del total_list[0][0]
+print("*"*50)
+print(total_list)
+print("*"*50)
         # tds = browser.find_elements_by_css_selector('#subjects > div.list > table > tbody > tr > td')
         # i=0
         # for td in tds:

@@ -203,6 +203,12 @@ button{
 	font-size:1.5rem;
 }
 
+.score_up,.score_down,.score_reason{
+	display:inline-block;
+	
+}
+
+
 
 .route_course{
 	border: 1px red solid;

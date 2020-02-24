@@ -23,8 +23,8 @@ function score(e) {
         }
     }).catch(err => console.error(err));
 
-    document.querySelector('.score_reason').innerHTML=
-    "<input type=text placeholder='이유는요??' required><button>Go!</button>"
+    //document.querySelector('.score_reason').innerHTML=
+    //"<input type=text placeholder='이유는요??' required><button>Go!</button>"
 }
 
     
