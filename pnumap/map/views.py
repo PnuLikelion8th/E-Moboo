@@ -115,7 +115,14 @@ from .models import Blog, ReviewData, Course, Professor, TempCrawlData
 #     return render(request)
 
 def main(request):
-    return render(request, "main.html")
+    buildings = Blog.objects.all()
+    if request.POST:
+        blogform = BlogForm(request.POST)
+        if blogform.is_valid():
+            blogform.save()
+            return redirect('main')
+    blogform = BlogForm()
+    return render(request, "main.html" {'buildings':buildings})
 
 def search(request):
     context={"msg": "hello chihun"}
@@ -131,7 +138,7 @@ def score(request,flag):
 
 
 def index(request):
-    buildings = Blog.objects.all()
+    
     return render(request, 'index.html', {'buildings':buildings})
 
 def write(request):
@@ -142,9 +149,9 @@ def write(request):
     blogform = BlogForm()
     return render(request, 'write.html', {'blogform':blogform})
 
-def detail(request, building_id):
-    building = get_object_or_404(Blog, id=building_id)
-    return render(request, 'detail.html', {'building':building})
+# def detail(request, building_id):
+#     building = get_object_or_404(Blog, id=building_id)
+#     return render(request, 'detail.html', {'building':building})
 
 def update(request, building_id):
     building_update = get_object_or_404(Blog, id=building_id)
@@ -154,7 +161,7 @@ def update(request, building_id):
             blogform.save()
             return redirect('main')
     blogform = BlogForm(instance=building_update)
-    return render(request, 'write.html', {'blogform':blogform})
+    return redirect('main')
 
 def delete(request,building_id):
     building_delete = get_object_or_404(Blog, id=building_id)
@@ -166,8 +173,6 @@ def building_info(request,building_id):
     dataset = TempCrawlData.objects.filter(buildingnum__contains='-')
     building_data = dataset.filter(buildingnum__startswith=building_id)
     return render(request, 'main.html', {'building_data':building_data})
-
-
 
 
 def building_info_detail(request, lec_id):
