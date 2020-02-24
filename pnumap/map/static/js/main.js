@@ -23,6 +23,9 @@ for(let i=0; i < btn.length; i++){
                 pre_btn.getElementsByTagName('span')[1].className = "blind"
                 pre_btn.getElementsByTagName('span')[1].querySelector('.coursebtn').remove()
             }
+            if (pre_b !== "" && pre_b !== this) {
+                pre_b.getElementsByTagName('span')[1].className = "blind"
+            }
         }       
         else{
             target_btn.className = "blind"

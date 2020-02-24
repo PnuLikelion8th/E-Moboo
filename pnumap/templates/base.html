@@ -34,13 +34,48 @@
     </nav>
     <section class="small_menu_section">
         <div class="small_menu_list_container">
-            <div class="gnb_q_form" method = "get">
-                <input id="gnb_q" type="search" name="q">
-                    <img class="search_icon" src="{% static 'image/돋보기.png' %}" alt="검색">
+            <div class="search_cate">
+              
+                <input class= "search_type" id="search_place" type="radio" name="search_type">
+                <div class="display_cate">
+                    📌
+                </div>
+                <label class="search_place_label" for="search_place">
+                    강의실 찾기
+                </label>
             </div>
-            <div class="gnb_q_result">
+            
+            <div class="search_cate">
+               
+
+                <input class="search_type" id ="search_course"type="radio" name="search_type">
+                <div class="display_cate">
+                    📌
+                </div>
+                <label class="search_course_label" for="search_course">
+                    강의 찾기
+                </label>
+
+            </div>
+            <div class="building_form">
+                <div class="gnb_q_form " method="get">
+                    <input id="gnb_q_building" type="search" name="q" placeholder="강의실을 찾아보세요">
+                    <img id="gnb_q_building_icon" class="search_icon" src="{% static 'image/돋보기.png' %}" alt="검색">
+                </div>
+            </div>
+
+            
+            <div class="course_form">
+
+                <div class="gnb_q_form" method="get">
+                    <input id="gnb_q_course" type="search" name="q" placeholder="강의를 찾아보세요">
+                    <img id="gnb_q_course_icon" class="search_icon" src="{% static 'image/돋보기.png' %}" alt="검색">
+                </div>
+            </div>
+
+            <!-- <div class="gnb_q_result">
                 전체 보기
-            </div>
+            </div> -->
             <a href="{%url 'write' %}">글쓰기</a>
             <!-- <div class="small_menu_list">검색</div> -->
             
