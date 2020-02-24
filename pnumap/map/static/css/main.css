@@ -256,7 +256,7 @@ button.pack410>.blind_active{
 	color:white;
 	border-radius: 40px;
 	opacity: 0.9;
-	z-index:101;
+	z-index:99;
 }
 
 .building_info_container{
@@ -307,6 +307,12 @@ button.pack410>.blind_active{
 	padding: 10px;
 	line-height: 26px;
 	border-radius: 3px;
+}
+
+
+.no_lec{
+	line-height: 50px;
+	margin-top: 130px;
 	position: relative;
 }
 

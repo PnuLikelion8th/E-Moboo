@@ -177,11 +177,27 @@ def delete(request,building_id):
 
 
 def building_info(request,building_id):
+    buildings = Blog.objects.all()
+    if request.POST:
+        blogform = BlogForm(request.POST)
+        if blogform.is_valid():
+            blogform.save()
+            return redirect('main')
+    blogform = BlogForm()
     dataset = TempCrawlData.objects.filter(buildingnum__contains='-')
     building_data = dataset.filter(buildingnum__startswith=building_id)
-    return render(request, 'main.html', {'building_data':building_data})
+    check_len = len(building_data)
+    
+    return render(request, 'main.html', {'building_data':building_data, "check_len":check_len, 'blogform':blogform})
 
 
 def building_info_detail(request, lec_id):
+    buildings = Blog.objects.all()
+    if request.POST:
+        blogform = BlogForm(request.POST)
+        if blogform.is_valid():
+            blogform.save()
+            return redirect('main')
+    blogform = BlogForm()
     data = TempCrawlData.objects.get(id=lec_id)
-    return render(request, 'main.html' , {'lec_data':data})
+    return render(request, 'main.html' , {'lec_data':data, 'blogform':blogform})
