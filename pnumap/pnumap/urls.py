@@ -24,7 +24,7 @@ urlpatterns = [
     path('score/<str:flag>/<str:lec>',views.score, name="score"),
     path('write/', views.write, name="write"),
     path('index/', views.index, name="index"),
-    path('detail/<int:building_id>', views.detail, name="detail"),
+    # path('detail/<int:building_id>', views.detail, name="detail"),
     path('update/<int:building_id>', views.update, name="update"),
     path('delete/<int:building_id>', views.delete, name="delete"),
 
