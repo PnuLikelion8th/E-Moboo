@@ -82,7 +82,7 @@
                 <input type="submit" value="글쓰기">
             </form>
             {%for i in buildings%}
-                <a href = "{%url 'detail' i.id%}">{{i.title}}<br></a>
+                {{i.title}}<br>
                 {{i.body}}<br>
 
                 <a href = "{%url 'update' i.id %}">수정</a>
