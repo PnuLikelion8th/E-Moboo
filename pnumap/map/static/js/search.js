@@ -3,11 +3,12 @@
 const search_box = document.querySelector('#gnb_q')
 const search_icon = document.querySelector('.search_icon')
 search_box.addEventListener('search', search, false);
-search_icon.addEventListener('click', search, false);
+search_icon.addEventListener('click', document.querySelector('search').search(), false);
 
     function search() {
-
-     
+        console.log(this)
+        console.log(this.value)
+        document.querySelector('.pack717').focus()
         fetch('/search/', {
             method: 'get',
             headers: {

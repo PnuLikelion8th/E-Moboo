@@ -6,7 +6,6 @@ score_up.addEventListener('click', score, false);
 score_down.addEventListener('click', score, false);
 
 function score(e) {
-
    
     fetch('/score/' + e.target.className, {
         method: 'get',
@@ -24,6 +23,7 @@ function score(e) {
         }
     }).catch(err => console.error(err));
 
-
+    document.querySelector('.score_reason').innerHTML=
+    "<input type=text placeholder='이유는요??' required><button>Go!</button>"
 }
 
