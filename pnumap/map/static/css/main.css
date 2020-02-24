@@ -11,6 +11,15 @@
     height: 798px;
 }
 
+#focus{
+	position: absolute;
+	top: 369px;
+	left: 404px;
+	display: block;
+	width:0;
+	opacity: 0;
+}
+
 
 .blind{
 	display: none;

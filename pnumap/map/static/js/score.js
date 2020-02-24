@@ -27,3 +27,4 @@ function score(e) {
     "<input type=text placeholder='이유는요??' required><button>Go!</button>"
 }
 
+    
