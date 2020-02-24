@@ -35,4 +35,8 @@ class ReviewData(models.Model):
     def __str__(self):
         return self.coursename
 
-class CourseData
+class TempCrawlData(models.Model):
+    buildingnum = models.CharField(max_length=20)
+    profname = models.CharField(max_length=20)
+    coursename = models.CharField(max_length=20)
+    score = models.IntegerField(default=0)

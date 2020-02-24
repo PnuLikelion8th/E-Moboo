@@ -27,11 +27,8 @@ urlpatterns = [
     path('detail/<int:building_id>', views.detail, name="detail"),
     path('update/<int:building_id>', views.update, name="update"),
     path('delete/<int:building_id>', views.delete, name="delete"),
-<<<<<<< HEAD
-    path('reviewparse/', views.reviewdata, name="reviewdata")
-    path('courseparse/', views.coursedata, name="coursedata")
-=======
+    path('reviewparse/', views.reviewdata, name="reviewdata"),
+    path('courseparse/', views.coursedata, name="coursedata"),
     path('building/<int:building_id>', views.building_info, name="building"),
     # path('parse/', views.reviewdata, name="reviewdata")
->>>>>>> 0f8ed8062cc4bc3adeffd9dec3f351fe876e47c2
 ]

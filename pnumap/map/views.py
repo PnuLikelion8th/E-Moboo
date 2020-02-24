@@ -4,17 +4,16 @@ from .models import Blog
 from django.http import HttpResponse, JsonResponse
 import json
 
-from .models import Blog, ReviewData, Course, Professor
-# from selenium import webdriver
-# from selenium.webdriver.common.keys import Keys
-# from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-# from selenium.webdriver.common.by import By
-# from bs4 import BeautifulSoup
+from .models import Blog, ReviewData, Course, Professor, TempCrawlData
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from bs4 import BeautifulSoup
 import time
 
-<<<<<<< HEAD
 def coursedata(request):
     browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
     browser.get('https://everytime.kr/login')
@@ -34,15 +33,20 @@ def coursedata(request):
     close = browser.find_element_by_xpath("//*[@id='sheet']/ul/li[3]/a").click()
 
     time.sleep(2)
-    while True:
+    temp_list = list()
+    for i in range(20):
         trs = browser.find_elements_by_css_selector("#subjects > div.list > table > tbody > tr")
         browser.execute_script("arguments[0].scrollIntoView(true);", trs[-1])
-        for tr in trs:
-            tds = browser.find_elements_by_css_selector('#subjects > div.list > table > tbody > tr > td')
-            i=0
-            for td in tds:
-                print(td.text)
-    return render(request)
+
+    for tr in trs[:100]:
+        # print(tr.text)
+        temp_list.append((tr.text).split(" "))
+    
+    del temp_list[0][0]
+    for i in temp_list:
+        print(i)
+        TempCrawlData.objects.create(buildingnum = i[8], profname = i[5], coursename= i[2])
+    return redirect('main')
 
 def reviewdata(request):
     browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
@@ -77,47 +81,6 @@ def reviewdata(request):
         browser.switch_to.window(browser.window_handles[1])
         wait = WebDriverWait(browser, 10)
         wait.until(EC.presence_of_element_located((By.ID, "container")))
-=======
-
-# Create your views here.
-def main(request):
-    return render(request, "main.html")
-
-
-# def reviewdata(request):
-#     browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
-#     browser.get('https://everytime.kr/login')
-#     time.sleep(1)
-
-#     login = browser.find_element_by_name('userid')
-#     login.send_keys('etcheef')
-#     login = browser.find_element_by_name('password')
-#     login.send_keys('Rimee202=')
-#     login.send_keys(Keys.RETURN)
-
-#     browser.find_element_by_css_selector("#menu > li:nth-child(3) > a").click()
-#     time.sleep(2)
-
-#     SCROLL_PAUSE_TIME = 0.5
-#     last_height = browser.execute_script("return document.body.scrollHeight")
-#     while True:
-#         browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-#         time.sleep(SCROLL_PAUSE_TIME)
-#         new_height = browser.execute_script("return document.body.scrollHeight")
-#         if new_height == last_height:
-#             break
-#         last_height = new_height
-
-#     reviews = browser.find_elements_by_class_name("article")
-#     time.sleep(1)
-#     i = 0
-
-#     while i < len(reviews):
-#         reviews[i].send_keys(Keys.CONTROL + '\n')
-#         browser.switch_to.window(browser.window_handles[1])
-#         wait = WebDriverWait(browser, 10)
-#         wait.until(EC.presence_of_element_located((By.ID, "container")))
->>>>>>> 0f8ed8062cc4bc3adeffd9dec3f351fe876e47c2
     
 #         #여기서부터 정보 가져옴
 #         req = browser.page_source
