@@ -151,6 +151,8 @@ nav{
         animation-name: nav_toggle;
         animation-direction : alternate;
         animation-fill-mode : forwards;
+        
+        overflow: scroll;
         }
         @keyframes nav_toggle {
             from{
