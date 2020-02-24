@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BlogForm
-from .models import Blog, ReviewData
+from .models import Blog, ReviewData, Course, Professor
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import time
 
-def reviewdata():
+def reviewdata(request):
     browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
     browser.get('https://everytime.kr/login')
     time.sleep(1)
@@ -59,18 +59,25 @@ def reviewdata():
         for star in star_list:
             c = star.text
 
-        result = ReviewData.objects.create(coursename=a, prof=b, star=c)
+        #후기
+        comment_list = soup.find_all('p','text')
+        comments = []
+        for comment in comment_list:
+            d = comment.get_text()
+            comments.append(d)
+
+        Professor.objects.create(name=b)
+        Course.objects.create(course=a)
+        ReviewData.objects.create(star=c, review=d)
 
         browser.close()
         browser.switch_to.window(browser.window_handles[0])
         i+=1
         time.sleep(2)
-    return result
+    return render(request)
 
 def main(request):
     return render(request, "main.html")
-
-
 
 def search(request):
     return redner(request,"main.html")
