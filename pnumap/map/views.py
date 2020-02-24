@@ -59,7 +59,15 @@ def reviewdata():
         for star in star_list:
             c = star.text
 
-        result = ReviewData.objects.create(coursename=a, prof=b, star=c)
+        #후기
+        comment_list = soup.find_all('p','text')
+        comments = []
+        for comment in comment_list:
+            d = comment.get_text()
+            comments.append(d)
+
+        Course.objects.create(course=a, prof=b)
+        ReviewData.objects.create(star=c, review=d)
 
         browser.close()
         browser.switch_to.window(browser.window_handles[0])
