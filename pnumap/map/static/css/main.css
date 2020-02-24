@@ -307,6 +307,7 @@ button.pack410>.blind_active{
 	padding: 10px;
 	line-height: 26px;
 	border-radius: 3px;
+	position: relative;
 }
 
 
