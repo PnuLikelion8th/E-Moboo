@@ -5,82 +5,82 @@ from django.http import HttpResponse, JsonResponse
 import json
 
 from .models import Blog, ReviewData, Course, Professor, TempCrawlData
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from bs4 import BeautifulSoup
-import time
+# from selenium import webdriver
+# from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.chrome.options import Options
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.common.by import By
+# from bs4 import BeautifulSoup
+# import time
 
-def coursedata(request):
-    browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
-    browser.get('https://everytime.kr/login')
-    time.sleep(1)
+# def coursedata(request):
+#     browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
+#     browser.get('https://everytime.kr/login')
+#     time.sleep(1)
 
-    login = browser.find_element_by_name('userid')
-    login.send_keys('etcheef')
-    login = browser.find_element_by_name('password')
-    login.send_keys('Rimee202=')
-    login.send_keys(Keys.RETURN)
-    time.sleep(1)
-    browser.find_element_by_css_selector("#menu > li:nth-child(2) > a").click()
-    time.sleep(1)
-    browser.find_element_by_xpath("//*[@id='container']/ul/li[1]").click()
-    browser.find_element_by_css_selector("#subjects")
-    time.sleep(5)
-    close = browser.find_element_by_xpath("//*[@id='sheet']/ul/li[3]/a").click()
+#     login = browser.find_element_by_name('userid')
+#     login.send_keys('etcheef')
+#     login = browser.find_element_by_name('password')
+#     login.send_keys('Rimee202=')
+#     login.send_keys(Keys.RETURN)
+#     time.sleep(1)
+#     browser.find_element_by_css_selector("#menu > li:nth-child(2) > a").click()
+#     time.sleep(1)
+#     browser.find_element_by_xpath("//*[@id='container']/ul/li[1]").click()
+#     browser.find_element_by_css_selector("#subjects")
+#     time.sleep(5)
+#     close = browser.find_element_by_xpath("//*[@id='sheet']/ul/li[3]/a").click()
 
-    time.sleep(2)
-    temp_list = list()
-    for i in range(20):
-        trs = browser.find_elements_by_css_selector("#subjects > div.list > table > tbody > tr")
-        browser.execute_script("arguments[0].scrollIntoView(true);", trs[-1])
+#     time.sleep(2)
+#     temp_list = list()
+#     for i in range(20):
+#         trs = browser.find_elements_by_css_selector("#subjects > div.list > table > tbody > tr")
+#         browser.execute_script("arguments[0].scrollIntoView(true);", trs[-1])
 
-    for tr in trs[:100]:
-        # print(tr.text)
-        temp_list.append((tr.text).split(" "))
+#     for tr in trs[:100]:
+#         # print(tr.text)
+#         temp_list.append((tr.text).split(" "))
     
-    del temp_list[0][0]
-    for i in temp_list:
-        print(i)
-        TempCrawlData.objects.create(buildingnum = i[8], profname = i[5], coursename= i[2])
-    return redirect('main')
+#     del temp_list[0][0]
+#     for i in temp_list:
+#         print(i)
+#         TempCrawlData.objects.create(buildingnum = i[8], profname = i[5], coursename= i[2])
+#     return redirect('main')
 
-def reviewdata(request):
-    browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
-    browser.get('https://everytime.kr/login')
-    time.sleep(1)
+# def reviewdata(request):
+#     browser = webdriver.Chrome(r"C:\Users\USER\Desktop\likelion\likelion8th\E-Moboo\chromedriver_win32\chromedriver.exe")
+#     browser.get('https://everytime.kr/login')
+#     time.sleep(1)
 
-    login = browser.find_element_by_name('userid')
-    login.send_keys('etcheef')
-    login = browser.find_element_by_name('password')
-    login.send_keys('Rimee202=')
-    login.send_keys(Keys.RETURN)
+#     login = browser.find_element_by_name('userid')
+#     login.send_keys('etcheef')
+#     login = browser.find_element_by_name('password')
+#     login.send_keys('Rimee202=')
+#     login.send_keys(Keys.RETURN)
 
-    browser.find_element_by_css_selector("#menu > li:nth-child(3) > a").click()
-    time.sleep(2)
+#     browser.find_element_by_css_selector("#menu > li:nth-child(3) > a").click()
+#     time.sleep(2)
 
-    SCROLL_PAUSE_TIME = 0.5
-    last_height = browser.execute_script("return document.body.scrollHeight")
-    while True:
-        browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(SCROLL_PAUSE_TIME)
-        new_height = browser.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
-            break
-        last_height = new_height
+#     SCROLL_PAUSE_TIME = 0.5
+#     last_height = browser.execute_script("return document.body.scrollHeight")
+#     while True:
+#         browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#         time.sleep(SCROLL_PAUSE_TIME)
+#         new_height = browser.execute_script("return document.body.scrollHeight")
+#         if new_height == last_height:
+#             break
+#         last_height = new_height
 
-    reviews = browser.find_elements_by_class_name("article")
-    time.sleep(1)
-    i = 0
+#     reviews = browser.find_elements_by_class_name("article")
+#     time.sleep(1)
+#     i = 0
 
-    while i < len(reviews):
-        reviews[i].send_keys(Keys.CONTROL + '\n')
-        browser.switch_to.window(browser.window_handles[1])
-        wait = WebDriverWait(browser, 10)
-        wait.until(EC.presence_of_element_located((By.ID, "container")))
+#     while i < len(reviews):
+#         reviews[i].send_keys(Keys.CONTROL + '\n')
+#         browser.switch_to.window(browser.window_handles[1])
+#         wait = WebDriverWait(browser, 10)
+#         wait.until(EC.presence_of_element_located((By.ID, "container")))
     
 #         #여기서부터 정보 가져옴
 #         req = browser.page_source
@@ -167,3 +167,9 @@ def building_info(request,building_id):
     # pass
     # return r('main')
     return render(request, 'main.html', {'building_data':"hello"})
+
+
+
+
+def building_info_detail(request, lec_id):
+    return render(request, 'main.html' , {'building_data':"hello"})
