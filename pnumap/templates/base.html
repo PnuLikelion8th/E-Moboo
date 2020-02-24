@@ -48,10 +48,16 @@
             <!-- <div class="small_menu_list">뭘넣을까유</div> -->
         </div>
     </section>
-    <section id="base_container">
-    {% block content %}
-    {% endblock %}    
-    </section>
+    <div id="base_container_wrapper">
+
+   
+        <section id="base_container">
+            {% block content %}
+
+            {% endblock %}    
+        </section>
+    </div>
+
     <footer>
         <div class="footer_list_container">
             <img class="footer_likelion" src="{% static 'image/likelion.png' %}">

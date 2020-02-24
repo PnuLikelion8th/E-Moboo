@@ -7,7 +7,7 @@
 
 {%block extra_head%}
     <meta name="description" content="부산대학교 강의평가와 캠퍼스맵 - Likelion8th" />   
-    <link rel="Stylesheet" type="text/css" href="{% static 'css/main.css' %}?dt={% now 'Ymd' %}">
+    <link rel="Stylesheet" type="text/css" href="{% static 'css/main.css' %}?dt={% now 'U' %}">
 {%endblock%}
 
 
@@ -425,5 +425,7 @@
     <div class="gate gate4 btt"><span>문창쪽문</span></div>
     <div class="gate gate5 btt"><span>북문</span></div>
 
-    <script type="text/javascript" src="{% static 'js/main.js' %}?dt={% now 'Ymd' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}?dt={% now 'U' %}"></script>
+    <script type="text/javascript" src="{% static 'js/search.js' %}?dt={% now 'U' %}"></script>
+
 {% endblock %}

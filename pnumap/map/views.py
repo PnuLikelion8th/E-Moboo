@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BlogForm
 from .models import Blog
-
+from django.http import HttpResponse, JsonResponse
+import json
 # Create your views here.
 def main(request):
     return render(request, "main.html")
@@ -9,7 +10,8 @@ def main(request):
 
 
 def search(request):
-    return redner(request,"main.html")
+    context={"msg": "hello chihun"}
+    return HttpResponse(json.dumps(context), content_type='application/json')
 
 def index(request):
     buildings = Blog.objects.all()

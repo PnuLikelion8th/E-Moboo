@@ -32,7 +32,7 @@
 	animation-iteration-count: 1;
 	animation-duration: 0.7s;
 	animation-name: blind_toggle;
-	
+
 }
 	@keyframes blind_toggle {
 		from{
@@ -42,7 +42,6 @@
 			opacity: 1;
 		}
 	} 
-
 
 
 button.pack1 span {background:#d6181f;color:#fff;border:0}

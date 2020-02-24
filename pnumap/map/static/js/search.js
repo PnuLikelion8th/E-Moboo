@@ -1,20 +1,14 @@
 
 
-let search_box = document.querySelector('.search')
-
-search_box.addEventListener('submit', search, false);
-
-
-
+const search_box = document.querySelector('#gnb_q')
+const search_icon = document.querySelector('.search_icon')
+search_box.addEventListener('search', search, false);
+search_icon.addEventListener('click', search, false);
 
     function search() {
-        let pk = this.getAttribute('name')
 
-        let data = new FormData();
-        data.append('pk', pk);
-
+     
         fetch('/search/', {
-            body: data,
             method: 'get',
             headers: {
             // 'Content-Type': 'application/x-www-form-urlencoded',
