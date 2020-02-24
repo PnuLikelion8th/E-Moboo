@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>여긴목록</h1>
+    <h1>글 보기</h1>
     {%for i in buildings%}
         <a href = "{%url 'detail' i.id%}">{{i.title}}<br></a>
         {{i.body}}<br>
