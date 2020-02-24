@@ -33,12 +33,16 @@ function search_building() {
         temp_b = document.querySelector('.pack' + this.previousSibling.previousSibling.value)
         temp_b.focus()
         temp_b.getElementsByTagName('span')[1].className = "blind_active"
-
+        temp_b.getElementsByTagName('span')[1].innerHTML += "<a class='coursebtn' href='" + "/building/" + this.previousSibling.previousSibling.value + "'" + ">강의 둘러보기</a>"
         if (pre_b !== "" && pre_b !== temp_b) {
             pre_b.getElementsByTagName('span')[1].className = "blind"
+            pre_b.getElementsByTagName('span')[1].querySelector('.coursebtn').remove()
+
         }
         if (pre_btn !== "" && pre_btn !== this) {
             pre_btn.getElementsByTagName('span')[1].className = "blind"
+            pre_btn.getElementsByTagName('span')[1].querySelector('.coursebtn').remove()
+
         }
         sidetoggle()
 
@@ -48,12 +52,17 @@ function search_building() {
         temp_b = document.querySelector('.pack' + this.value)
         temp_b.focus()
         temp_b.getElementsByTagName('span')[1].className = "blind_active"
+        temp_b.getElementsByTagName('span')[1].innerHTML += "<a class='coursebtn' href='" + "/building/" + this.value + "'" + ">강의 둘러보기</a>"
 
         if (pre_b !== "" && pre_b !== temp_b) {
             pre_b.getElementsByTagName('span')[1].className = "blind"
+            pre_b.getElementsByTagName('span')[1].querySelector('.coursebtn').remove()
+
         }
         if (pre_btn !== "" && pre_btn !== temp_b) {
             pre_btn.getElementsByTagName('span')[1].className = "blind"
+            pre_btn.getElementsByTagName('span')[1].querySelector('.coursebtn').remove()
+
         }
         sidetoggle()
         pre_b = temp_b
