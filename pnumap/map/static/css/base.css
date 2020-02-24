@@ -308,9 +308,29 @@ footer{
         margin-top:11px;
     }
 }
+.footprint_row{
+    position: relative;
+    width:80%;
+    margin:20px auto;
+    border-bottom:2px solid black; 
+    padding-bottom: 10px;
+    text-align: left;
+}
+.for_maker_update{
+        position: absolute;
+        right:5px;
+        top:0px;
+        font-size:0.75rem;
+        padding:2px;
+}
 
-
-
+.for_maker_delete{
+        position: absolute;
+        right:5px;
+        top:20px;
+        font-size:0.75rem;
+        padding:2px;
+}
 .show{
     display: inline-block;
 }

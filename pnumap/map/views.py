@@ -168,7 +168,7 @@ def update(request, building_id):
             blogform.save()
             return redirect('main')
     blogform = BlogForm(instance=building_update)
-    return redirect('main')
+    return render(request,'main.html',{'blogform':blogform})
 
 def delete(request,building_id):
     building_delete = get_object_or_404(Blog, id=building_id)

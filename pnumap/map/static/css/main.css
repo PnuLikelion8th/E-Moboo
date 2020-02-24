@@ -324,3 +324,41 @@ button.pack410>.blind_active{
 	align-items: center;
 	justify-content: center;
 }
+
+
+.for_maker_nick{
+	width:80%;
+	height:40px;
+	border:none;
+	outline: none;
+	padding:12px;
+	box-sizing: border-box;
+	border-radius: 20px;
+	resize: none;
+
+}
+
+.for_maker_desc{
+	width:80%;
+	height:50px;
+	border:none;
+	outline: none;
+	padding:10px;
+	box-sizing: border-box;
+	border-radius: 20px;
+	resize: none;
+}
+.for_maker_btn{
+	border:none;
+	background: none;
+	font-weight: 800;
+	float: right;
+	margin-right:10%;
+	margin-top:15px;
+	border-radius: 15px;
+	padding:5px 5px;
+	border:1.5px solid black;
+}
+.clear{
+	clear: both;
+}

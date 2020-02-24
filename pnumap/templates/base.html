@@ -78,17 +78,24 @@
             </div> -->
 
             <form method="POST">
+
                 {%csrf_token%}
-                {{blogform}}
-                <input type="submit" value="글쓰기">
+                    {%for i in blogform%}
+                        {{i}}
+                    {%endfor%}
+                <input class="for_maker_btn" type="submit" value="글쓰기">
+                <div class="clear"></div>
             </form>
 
+           
             {%for i in buildings%}
-                {{i.title}}<br>
-                {{i.body}}<br>
-                <a href = "{%url 'update' i.id %}">수정</a>
-                <a href = "{%url 'delete' i.id %}">삭제</a>
-            <hr>
+            <div class="footprint_row">
+                닉네임 : {{i.title}}<br>
+                내용 : {{i.body}}<br>
+                <a class="for_maker_update" href = "{%url 'update' i.id %}">수정</a>
+                <a class="for_maker_delete" href = "{%url 'delete' i.id %}">삭제</a>
+            </div>
+               
             {%endfor%}
             <!-- <div class="small_menu_list">검색</div> -->
             
