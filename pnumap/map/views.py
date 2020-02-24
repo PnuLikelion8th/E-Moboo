@@ -132,3 +132,10 @@ def delete(request,building_id):
     building_delete = get_object_or_404(Blog, id=building_id)
     building_delete.delete()
     return redirect('index')
+
+
+def building_info(request,building_id):
+    # Somedata.objects.filter(building__endswith=building_id)
+    # pass
+    # return r('main')
+    return render(request, 'main.html', {'building_data':"hello"})

@@ -27,5 +27,6 @@ urlpatterns = [
     path('detail/<int:building_id>', views.detail, name="detail"),
     path('update/<int:building_id>', views.update, name="update"),
     path('delete/<int:building_id>', views.delete, name="delete"),
+    path('building/<int:building_id>', views.building_info, name="building"),
     # path('parse/', views.reviewdata, name="reviewdata")
 ]

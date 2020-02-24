@@ -30,7 +30,7 @@
 	bottom:20px;
 	right: -58px;
 	width: 150px;
-	height: 88px;
+	height: 66px;
 	padding-top: 10px;
 	font-size: 0.8rem;
 	font-weight: 900;
@@ -201,4 +201,35 @@ button{
 
 .score_container{
 	font-size:1.5rem;
+}
+
+
+.route_course{
+	border: 1px red solid;
+	position: absolute;
+	background: green;
+	top: 300px;
+	left: 300px;
+	z-index: 104;
+}
+
+
+
+.coursebtn{
+	display: block;
+	padding: 4px;
+	margin: 8px;
+	border: 2px solid white;
+	border-radius: 5px;
+	color: white;
+	background: rgba(0,0,0,0.6);
+}
+
+
+button.pack206>.blind_active{
+	font-size: 0.75rem;
+}
+
+button.pack410>.blind_active{
+	font-size: 0.67rem;
 }
