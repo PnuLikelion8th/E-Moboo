@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main, name="main"),
     path('search/',views.search, name="search"),
-    path('score/<str:flag>',views.score, name="score"),
+    path('score/<str:flag>/<str:lec>',views.score, name="score"),
     path('write/', views.write, name="write"),
     path('index/', views.index, name="index"),
     # path('detail/<int:building_id>', views.detail, name="detail"),

@@ -200,7 +200,10 @@ button{
 
 
 .score_container{
+	margin-right: 10px;
+	text-align: right;
 	font-size:1.5rem;
+	cursor: pointer;
 }
 
 .score_up,.score_down,.score_reason{
@@ -310,4 +313,20 @@ button.pack410>.blind_active{
 .no_lec{
 	line-height: 50px;
 	margin-top: 130px;
+	position: relative;
+}
+
+#cur_score{
+	width: 40px;
+	height:40px;
+	position: absolute;
+	right:30px;
+	top:15px;
+	border-radius: 50%;
+	background-color: #FED047;
+	color:black;
+	font-weight: 800;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }

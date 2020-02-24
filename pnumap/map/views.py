@@ -128,12 +128,19 @@ def search(request):
     context={"msg": "hello chihun"}
     return HttpResponse(json.dumps(context), content_type='application/json')
 
-def score(request,flag):
-    print(flag)
+def score(request,flag,lec):
+    temp_lec = TempCrawlData.objects.get(id=lec)
+    print(temp_lec)
     if flag == "score_up":
-        context ={'msg': 'up'}
+        temp_lec.score += 1
+        temp_lec.save()
+        
+        context ={'msg': 'up','cur_score': temp_lec.score }
     else:
-        context ={'msg': 'down'}
+        temp_lec.score -= 1
+        temp_lec.save()
+
+        context ={'msg': 'down', 'cur_score': temp_lec.score }
     return HttpResponse(json.dumps(context), content_type='application/json')
 
 
