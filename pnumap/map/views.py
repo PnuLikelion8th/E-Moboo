@@ -122,7 +122,7 @@ def main(request):
             blogform.save()
             return redirect('main')
     blogform = BlogForm()
-    return render(request, "main.html" ,{'buildings':buildings})
+    return render(request, "main.html" ,{'buildings':buildings, 'blogform':blogform})
 
 def search(request):
     context={"msg": "hello chihun"}

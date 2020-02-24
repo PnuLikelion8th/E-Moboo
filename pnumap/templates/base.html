@@ -76,15 +76,16 @@
             <!-- <div class="gnb_q_result">
                 전체 보기
             </div> -->
+
             <form method="POST">
                 {%csrf_token%}
                 {{blogform}}
                 <input type="submit" value="글쓰기">
             </form>
+
             {%for i in buildings%}
                 {{i.title}}<br>
                 {{i.body}}<br>
-
                 <a href = "{%url 'update' i.id %}">수정</a>
                 <a href = "{%url 'delete' i.id %}">삭제</a>
             <hr>
