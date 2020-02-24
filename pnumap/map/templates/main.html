@@ -46,7 +46,11 @@
         <img onclick="modal_hidden();" src="{% static 'image/xxx.png' %}" class="x_btn">
         <div class="building_info_container">
             <div class="b_i_title">
+                {% if check_len == 0 %}
+                saddsa
+                {% else %}
                 개설 강좌
+                {% endif %}   
             </div>
             {% for i in building_data %}
             <a href="{% url 'lec_detail' i.id %}">
@@ -59,6 +63,19 @@
         </div>
         
     </div>
+    {% elif not building_data and check_len == 0%}
+    <div class="building_info_section">
+        <img onclick="modal_hidden();" src="{% static 'image/xxx.png' %}" class="x_btn">
+        <div class="building_info_container">
+            <div class="b_i_title no_lec">
+                
+                개설된 강좌가<br>
+                아직 없습니다. 
+            </div>
+        </div>
+        
+    </div>
+    
     {% endif %}
 
     
