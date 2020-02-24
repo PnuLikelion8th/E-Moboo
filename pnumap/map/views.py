@@ -138,7 +138,7 @@ def write(request):
     blogform = BlogForm(request.POST)
     if blogform.is_valid():
         blogform.save()
-        return redirect('index')
+        return redirect('main')
     blogform = BlogForm()
     return render(request, 'write.html', {'blogform':blogform})
 
@@ -152,14 +152,14 @@ def update(request, building_id):
         blogform = BlogForm(request.POST, instance=building_update)
         if blogform.is_valid():
             blogform.save()
-            return redirect('index')
+            return redirect('main')
     blogform = BlogForm(instance=building_update)
     return render(request, 'write.html', {'blogform':blogform})
 
 def delete(request,building_id):
     building_delete = get_object_or_404(Blog, id=building_id)
     building_delete.delete()
-    return redirect('index')
+    return redirect('main')
 
 
 def building_info(request,building_id):
