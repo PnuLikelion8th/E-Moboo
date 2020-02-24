@@ -6,8 +6,8 @@ score_up.addEventListener('click', score, false);
 score_down.addEventListener('click', score, false);
 
 function score(e) {
-   
-    fetch('/score/' + e.target.className, {
+    document.querySelector('#score_lec').value
+    fetch('/score/' + e.target.className + '/' + document.querySelector('#score_lec').value, {
         method: 'get',
         headers: {
             'Accept': 'application/json'
@@ -16,6 +16,7 @@ function score(e) {
         if (res.status === 200 || res.status === 201) {
             res.json().then((json) => {
                 console.log("성공", json)
+                document.querySelector('#cur_score').innerHTML = json['cur_score']
             },
 
             )
