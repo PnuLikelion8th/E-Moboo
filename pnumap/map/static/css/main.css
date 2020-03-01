@@ -13,10 +13,10 @@
 
 #focus{
 	position: absolute;
-	/* top: 430px;
-	left: 404px; */
 	display: block;
 	width:300px;
+	top: 100px;
+	left: 100px;
 	opacity: 0;
 }
 
@@ -207,9 +207,9 @@ button.pack7 span {background:#8048a0;color:#fff;border:0}
 	z-index:1}
 .gate1 {left:74px;top:259px}
 .gate2 {left:174px;top:678px}
-.gate3 {left:411px;top:694px}
-.gate4 {left:561px;top:519px}
-.gate5 {left:655px;top:451px}
+.gate3 {left:411px;top:694px; width: 22px;}
+.gate4 {left:561px;top:519px; width: 42px;}
+.gate5 {left:655px;top:451px; width:22px}
 
 
 
