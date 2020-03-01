@@ -315,6 +315,7 @@ footer{
     border-bottom:2px solid black; 
     padding-bottom: 10px;
     text-align: left;
+    word-break: break-all;
 }
 .for_maker_update{
         position: absolute;
@@ -326,8 +327,8 @@ footer{
 
 .for_maker_delete{
         position: absolute;
-        right:5px;
-        top:20px;
+        right:32px;
+        top:0px;
         font-size:0.75rem;
         padding:2px;
 }
