@@ -13,11 +13,41 @@
 
 #focus{
 	position: absolute;
-	top: 430px;
-	left: 404px;
+	/* top: 430px;
+	left: 404px; */
 	display: block;
-	width:0;
+	width:300px;
 	opacity: 0;
+}
+
+@media(max-width:660px){
+	#focus{
+		position: absolute;
+		top: 430px;
+		left: 400px;
+		display: block;
+
+	}
+
+}
+@media(max-width:550px){
+	#focus{
+		position: absolute;
+		top: 430px;
+		left: 230px;
+		display: block;
+		width:400px;
+	}
+
+}
+@media(max-width:450px){
+	#focus{
+		position: absolute;
+		top: 430px;
+		left: 220px;
+		display: block;
+	}
+
 }
 
 
@@ -159,7 +189,7 @@ button.pack7 span {background:#8048a0;color:#fff;border:0}
 	button.pack715 {top:86px;left:555px}
 	button.pack716 {top:56px;left:535px}
 	button.pack717 {top:46px;left:508px}
-.landmark {display:block;position:absolute;border-radius:999px;box-sizing:border-box;background:#fff;border:1px solid #666;font-size:11px;padding:0 7px;z-index:1}
+.landmark {display:block;position:absolute;border-radius:999px;box-sizing:border-box;background:#fff;border:1px solid #666;font-size:11px;padding:2px 7px;z-index:1; width:57px; text-align: center;}
 .landmark1 {left:159px;top:363px}
 .landmark2 {left:344px;top:374px}
 .landmark3 {left:480px;top:384px}
@@ -283,14 +313,14 @@ button.pack410>.blind_active{
 /* 스크롤 바 css */
 ::-webkit-scrollbar {
     width: 0;  /* 세로축 스크롤바 길이 */
-    height: 20px;  /* 가로축 스크롤바 길이 */
+    height: 0;  /* 가로축 스크롤바 길이 */
   }
   ::-webkit-scrollbar-track-piece {
-    background-color: #dddddd;
+    background-color: none;
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    background-color: #f16512;
+    background-color: none;
   }
 
 
