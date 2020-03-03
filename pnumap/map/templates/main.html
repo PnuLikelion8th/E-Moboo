@@ -10,75 +10,75 @@
     <link rel="Stylesheet" type="text/css" href="{% static 'css/main.css' %}?dt={% now 'U' %}">
 {%endblock%}
 
-
-
-{% block content %}
-    <img id="main_img" src="{% static 'image/pnumap.jfif' %}">
-    <input type="text" id="focus">
+{% block sub_content %}
     {% if lec_data %}
-    <div class="building_info_section">
-        <img onclick="modal_hidden();" src="{% static 'image/xxx.png' %}" class="x_btn">
-        <div class="building_info_container">
-            <div class="b_i_title">
-                강의 세부정보
-            </div>
-            <div class="b_i_list_container">
-               
-                <div class="b_i_list">강좌명 : {{lec_data.coursename}} </div> <span id="cur_score">{{lec_data.score}}</span>
-                <div class="b_i_list">교수명 : {{lec_data.profname}} </div>
-                <div class="b_i_list">
-                    <div class="score_container">
-                    
-                    <!-- <div class="score_reason">
-                        <input type=text placeholder='간단한 코멘트와 up down' required>
-                    </div> -->
-                    <input id="score_lec" type="hidden" value="{{lec_data.id}}" name="score_lec">
+        <div class="building_info_section">
+            <img onclick="modal_hidden();" src="{% static 'image/xxx.png' %}" class="x_btn">
+            <div class="building_info_container">
+                <div class="b_i_title">
+                    강의 세부정보
+                </div>
+                <div class="b_i_list_container">
+                
+                    <div class="b_i_list">강좌명 : {{lec_data.coursename}} </div> <span id="cur_score">{{lec_data.score}}</span>
+                    <div class="b_i_list">교수명 : {{lec_data.profname}} </div>
+                    <div class="b_i_list">
+                        <div class="score_container">
+                        
+                        <!-- <div class="score_reason">
+                            <input type=text placeholder='간단한 코멘트와 up down' required>
+                        </div> -->
+                        <input id="score_lec" type="hidden" value="{{lec_data.id}}" name="score_lec">
 
-                    <div class="score_up">👍</div>
-                    <div class="score_down">👎</div>
+                        <div class="score_up">👍</div>
+                        <div class="score_down">👎</div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
-        
-    </div>
 
-    {% elif building_data %}
-    <div class="building_info_section">
-        <img onclick="modal_hidden();" src="{% static 'image/xxx.png' %}" class="x_btn">
-            <div class="building_info_container">
-            <div class="b_i_title">
-                {% if check_len == 0 %}
-                saddsa
-                {% else %}
-                개설 강좌
-                {% endif %}   
-            </div>
-            {% for i in building_data %}
-            <a href="{% url 'lec_detail' i.id %}">
-                <div class="b_i_list_container">
-                    <div class="b_i_list">강좌명 : {{i.coursename}}</div>
-                    <div class="b_i_list">교수명 : {{i.profname}}</div>
+        {% elif building_data %}
+        <div class="building_info_section">
+            <img onclick="modal_hidden();" src="{% static 'image/xxx.png' %}" class="x_btn">
+                <div class="building_info_container">
+                <div class="b_i_title">
+                    {% if check_len == 0 %}
+                    saddsa
+                    {% else %}
+                    개설 강좌
+                    {% endif %}   
                 </div>
-            </a>
-            {% endfor %}
-        </div>
-        
-    </div>
-    {% elif not building_data and check_len == 0%}
-    <div class="building_info_section">
-        <img onclick="modal_hidden();" src="{% static 'image/xxx.png' %}" class="x_btn">
-        <div class="building_info_container">
-            <div class="b_i_title no_lec">
-                
-                개설된 강좌가<br>
-                아직 없습니다. 
+                {% for i in building_data %}
+                <a href="{% url 'lec_detail' i.id %}">
+                    <div class="b_i_list_container">
+                        <div class="b_i_list">강좌명 : {{i.coursename}}</div>
+                        <div class="b_i_list">교수명 : {{i.profname}}</div>
+                    </div>
+                </a>
+                {% endfor %}
             </div>
+            
+        </div>
+        {% elif not building_data and check_len == 0%}
+        <div class="building_info_section">
+            <img onclick="modal_hidden();" src="{% static 'image/xxx.png' %}" class="x_btn">
+            <div class="building_info_container">
+                <div class="b_i_title no_lec">
+                    
+                    개설된 강좌가<br>
+                    아직 없습니다. 
+                </div>
+            </div>
+            
         </div>
         
-    </div>
-    
-    {% endif %}
+        {% endif %}
+{% endblock %}
+{% block content %}
+    <img id="main_img" src="{% static 'image/pnumap.jfif' %}">
+    <input type="text" id="focus">
 
     
     <button class="pack1 pack101" type="button" data-before="101">

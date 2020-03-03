@@ -14,7 +14,7 @@
 #focus{
 	position: absolute;
 	display: block;
-	width:300px;
+	width:10px;
 	top: 100px;
 	left: 100px;
 	opacity: 0;
@@ -22,34 +22,31 @@
 
 @media(max-width:660px){
 	#focus{
-		position: absolute;
 		top: 430px;
-		left: 400px;
+		left: 565px;
 		display: block;
-
 	}
 
 }
 @media(max-width:550px){
 	#focus{
-		position: absolute;
-		top: 430px;
-		left: 230px;
-		display: block;
-		width:400px;
+		top: 330px;
+		left: 550px;
 	}
 
 }
 @media(max-width:450px){
 	#focus{
-		position: absolute;
-		top: 430px;
-		left: 220px;
-		display: block;
+		left: 437px;
 	}
 
 }
+@media(max-width:420px){
+	#focus{
+		left: 407px;
+	}
 
+}
 
 .blind{
 	display: none;
@@ -287,6 +284,7 @@ button.pack410>.blind_active{
 	border-radius: 40px;
 	opacity: 0.9;
 	z-index:99;
+	
 }
 
 .building_info_container{

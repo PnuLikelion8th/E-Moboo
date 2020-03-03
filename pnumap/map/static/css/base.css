@@ -342,29 +342,29 @@ footer{
 }
 .speaker{
     position: relative;
-    max-width: 600px;
+    width: 600px;
     margin: 0 auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background: red;
     padding: 5px;
     border-radius: 25px;
-    animation: change_bg 5s 0s infinite ease-in forwards alternate;
+    animation: change_bg 7s 0s infinite ease-in forwards alternate;
 }
 @keyframes change_bg{
     0% {
         background: red;
     }
     25% {
-        background: blue; 
+        background: orange; 
     }
     50% {
-        background: yellow;
+        background: green;
     }
     75%{
-        background: purple;
+        background: blue;
     }
     100%{
-        background: green;
+        background: violet;
     }
 }
 .speaker>img{
@@ -377,7 +377,7 @@ footer{
 }
 .speaker_content{
     display: inline-block;
-    width: 515px;
+    width: 510px;
     color: white;
     font-weight: 600;
     text-overflow: ellipsis;
@@ -397,23 +397,79 @@ footer{
     position: absolute;
     top:10px;
     right: 15px;
-    animation: change_bg_tri 5s 0s infinite ease-in forwards alternate;
+    animation: change_bg_tri 7s 0s infinite ease-in forwards alternate;
+    cursor: pointer;
 }
 
 @keyframes change_bg_tri{
     0% {
-        border-top: 19px solid green;
+        border-top: 19px solid violet;
     }
     25% {
-        border-top: 19px solid red; 
+        border-top: 19px solid yellow; 
     }
     50% {
-        border-top: 19px solid blue;
+        border-top: 19px solid wheat;
     }
     75%{
-        border-top: 19px solid yellow;
+        border-top: 19px solid orange;
     }
     100%{
         border-top: 19px solid purple;
+    }
+}
+
+
+.speaker_section_active{
+    /* display: none; */
+    position: absolute;
+    left:50%; transform:translateX(-50%);
+    width: 580px;
+    height: 500px;
+    background: rgba(0,0,0,0.6);
+    margin: 0 auto;
+    animation: toggle_section 0.5s 0s 1 ease-in forwards alternate;
+}
+@keyframes toggle_section{
+    from{
+        height: 0;
+
+    }
+    to{
+        height: 500px;
+    }
+}
+
+
+@media(max-width:1024px){
+    .speaker{
+        width: 450px;
+    }
+    .speaker_content{
+        width: 360px;
+    }
+    .speaker_section_active{
+        width: 430px;
+    }
+}
+
+@media(max-width:500px){
+    .speaker>img{
+        width: 28px;
+        margin-right: 3px;
+    }
+    .speaker{
+        width: 320px;
+    }
+    .speaker_content{
+        width: 247px;
+        font-size: 0.85rem;
+    }
+    .tri{
+        top:7px;
+        right: 12px;
+    }
+    .speaker_section_active{
+        width: 305px;
     }
 }
