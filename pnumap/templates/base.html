@@ -97,23 +97,16 @@
             </div>
                
             {%endfor%}
-            <!-- <div class="small_menu_list">검색</div> -->
-            
-            <!-- <div class="small_menu_list">내브에는</div> -->
-            <!-- <div class="small_menu_list">뭘넣을까유</div> -->
-            <!-- <div class="score_container">
-                <div class="score_up">👍</div>
-                <div class="score_down">👎</div>
-                <div class="score_reason">
-
-                </div>
-            </div> -->
+           
         </div>
     </section>
+    <section class="speaker_container">
+        <div class="speaker"><img src="{% static 'image/speaker_icon.png' %}"><span class="speaker_content">안녕하세요 저는 확성기</span> <div class="tri"></div></div>
+    </section>
     <div id="base_container_wrapper">
-
-   
+        
         <section id="base_container">
+            
             {% block content %}
 
             {% endblock %}    

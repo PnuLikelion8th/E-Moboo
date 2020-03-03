@@ -15,7 +15,7 @@ for(let i=0; i < btn.length; i++){
             building_id = target_btn.parentElement.querySelector('.num').innerHTML;
             console.log(building_id)
             target_btn.className = "blind_active"
-            target_btn.innerHTML += "<a class='coursebtn' href='"+"/building/"+building_id+"'"+">강의 둘러보기</a>";
+            target_btn.innerHTML += "<a class='coursebtn' href='"+"/building/"+building_id+"'"+">건물 둘러보기</a>";
             
             console.log(target_btn)
 

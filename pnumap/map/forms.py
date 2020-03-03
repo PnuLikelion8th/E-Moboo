@@ -14,3 +14,7 @@ class BlogForm(forms.ModelForm):
     class Meta:
         model = Blog
         fields = ('title', 'body',)
+
+
+# class Graffiti(forms.ModelForm):
+    
