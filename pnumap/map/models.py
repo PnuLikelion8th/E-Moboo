@@ -40,3 +40,7 @@ class TempCrawlData(models.Model):
     profname = models.CharField(max_length=20)
     coursename = models.CharField(max_length=20)
     score = models.IntegerField(default=0)
+
+
+class Speaker(models.Model):
+    speaker_content = models.CharField(max_length=50)

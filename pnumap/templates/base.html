@@ -77,7 +77,7 @@
                 전체 보기
             </div> -->
 
-            <form method="POST">
+            <!-- <form method="POST">
 
                 {%csrf_token%}
                     {%for i in blogform%}
@@ -96,17 +96,24 @@
                 <a class="for_maker_delete" href = "{%url 'delete' i.id %}">삭제</a>
             </div>
                
-            {%endfor%}
+            {%endfor%} -->
            
         </div>
     </section>
     <section class="speaker_container">
         <div class="speaker">
             <img src="{% static 'image/speaker_icon.png' %}">
-            <marquee scrollamount="8" class="speaker_content">안녕하세요 저는 확성기★★★★★★★★★★</marquee>
+            <marquee scrollamount="8" class="speaker_content">{{speaker.speaker_content}}</marquee>
             <div class="tri"></div>
         </div>
-        <div class="speaker_hidden_section"></div>
+        <div class="speaker_hidden_section">
+            <form method="POST" action="{% url 'speaker_submit' %}">
+                {%csrf_token%}
+                <input type="text" name="speaker_content" placeholder="공지글을 작성해보세요!">
+                <input type="submit" value="확인">
+            </form>
+           
+        </div>
     </section>
 
         {% block sub_content %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BlogForm
-from .models import Blog, TempCrawlData
+from .models import Blog, TempCrawlData, Speaker
 from django.http import HttpResponse, JsonResponse
 import json
 
@@ -115,14 +115,15 @@ from .models import Blog, ReviewData, Course, Professor, TempCrawlData
 #     return render(request)
 
 def main(request):
-    buildings = Blog.objects.all()
-    if request.POST:
-        blogform = BlogForm(request.POST)
-        if blogform.is_valid():
-            blogform.save()
-            return redirect('main')
-    blogform = BlogForm()
-    return render(request, "main.html" ,{'buildings':buildings, 'blogform':blogform})
+    # buildings = Blog.objects.all()
+    # if request.POST:
+    #     blogform = BlogForm(request.POST)
+    #     if blogform.is_valid():
+    #         blogform.save()
+    #         return redirect('main')
+    # blogform = BlogForm()
+    speaker = Speaker.objects.order_by('id').last()
+    return render(request, "main.html", {'speaker':speaker})
 
 def search(request):
     context={"msg": "hello chihun"}
@@ -130,7 +131,7 @@ def search(request):
 
 def score(request,flag,lec):
     temp_lec = TempCrawlData.objects.get(id=lec)
-    print(temp_lec)
+    # print(temp_lec)
     if flag == "score_up":
         temp_lec.score += 1
         temp_lec.save()
@@ -143,10 +144,8 @@ def score(request,flag,lec):
         context ={'msg': 'down', 'cur_score': temp_lec.score }
     return HttpResponse(json.dumps(context), content_type='application/json')
 
-
 def index(request):
-    
-    return render(request, 'index.html', {'buildings':buildings})
+    return render(request, 'index.html')
 
 def write(request):
     blogform = BlogForm(request.POST)
@@ -155,10 +154,6 @@ def write(request):
         return redirect('main')
     blogform = BlogForm()
     return render(request, 'write.html', {'blogform':blogform})
-
-# def detail(request, building_id):
-#     building = get_object_or_404(Blog, id=building_id)
-#     return render(request, 'detail.html', {'building':building})
 
 def update(request, building_id):
     building_update = get_object_or_404(Blog, id=building_id)
@@ -177,27 +172,25 @@ def delete(request,building_id):
 
 
 def building_info(request,building_id):
-    buildings = Blog.objects.all()
-    if request.POST:
-        blogform = BlogForm(request.POST)
-        if blogform.is_valid():
-            blogform.save()
-            return redirect('main')
-    blogform = BlogForm()
     dataset = TempCrawlData.objects.filter(buildingnum__contains='-')
     building_data = dataset.filter(buildingnum__startswith=building_id)
     check_len = len(building_data)
     
-    return render(request, 'main.html', {'building_data':building_data, "check_len":check_len, 'blogform':blogform})
+    return render(request, 'main.html', {'building_data':building_data, "check_len":check_len})
 
 
 def building_info_detail(request, lec_id):
-    buildings = Blog.objects.all()
-    if request.POST:
-        blogform = BlogForm(request.POST)
-        if blogform.is_valid():
-            blogform.save()
-            return redirect('main')
-    blogform = BlogForm()
     data = TempCrawlData.objects.get(id=lec_id)
-    return render(request, 'main.html' , {'lec_data':data, 'blogform':blogform})
+    return render(request, 'main.html' , {'lec_data':data})
+
+
+
+def speaker_submit(request):
+    
+    if request.method == "POST":
+        speaker_content = request.POST['speaker_content']
+        Speaker.objects.create(speaker_content=speaker_content)
+
+    return redirect('main')
+        
+    
