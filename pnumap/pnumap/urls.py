@@ -34,4 +34,7 @@ urlpatterns = [
     
     path('building/<int:building_id>', views.building_info, name="building"),
     path('lec_detail/<int:lec_id>', views.building_info_detail ,name = "lec_detail"),
+
+
+    path('speaker_submit/', views.speaker_submit, name="speaker_submit"),
 ]

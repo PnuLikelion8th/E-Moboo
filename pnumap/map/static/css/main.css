@@ -273,7 +273,7 @@ button.pack410>.blind_active{
 	padding:10px;
 }
 .building_info_section{
-	position: absolute;
+	position: fixed;
 	margin: auto;
     left: 0;
     right: 0;
