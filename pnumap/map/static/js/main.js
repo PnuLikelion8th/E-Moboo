@@ -14,7 +14,7 @@ for(let i=0; i < btn.length; i++){
         if(target_btn.className=="blind"){
             building_id = target_btn.parentElement.querySelector('.num').innerHTML;
             console.log(building_id)
-            target_btn.className = "blind_active"
+            target_btn.className = "blind_active nes-balloon from-left nes-bal-custom"
             target_btn.innerHTML += "<a class='coursebtn' href='"+"/building/"+building_id+"'"+">건물 둘러보기</a>";
             
             console.log(target_btn)

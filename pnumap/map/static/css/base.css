@@ -18,9 +18,12 @@ a:hover, a:active { text-decoration: none; }
     font-family: 'nanumsquare_R';
     src: url('../font/NANUMSQUARER.TTF');
 }
-
+@font-face {
+  font-family: 'dunggeunmo';
+  src: url('../font/DungGeunMo.ttf');
+}
 * { 
-    font-family: 'nanumsquare_R';
+    font-family: 'dunggeunmo';
 }
 .logo{
     width:100px;
@@ -130,7 +133,7 @@ nav{
         width : 25vw;
         left:0;
         top:0;
-        text-align: center;
+        padding-left:50px;
         height: 100%;
         background: white;
         transform: matrix(1, 0, 0, 1, -400, 0);
@@ -174,24 +177,24 @@ nav{
         /* padding: 9%; */
 
     }
-    .search_cate{
-        /* border:1px solid red; */
+    /* .search_cate{
+        border:1px solid red;
         padding:10px 20px;
         margin: 20px;
         font-weight: 800;
         text-align: left;
         margin-left: -10px;
-    }
-    .search_cate > input {
+    } */
+    /* .search_cate > input {
         display: none;
-    }
-    .display_cate{
+    } */
+    /* .display_cate{
         visibility: hidden;
         display: inline-block;
     }
     input[class="search_type"]:checked + .display_cate{
         visibility: visible;
-    }
+    } */
     .small_menu_list{
         border: 1px solid blue;
         margin: 10px;
@@ -232,7 +235,7 @@ nav{
 .building_form, .course_form{
     display: none;
 }
-#gnb_q_building,#gnb_q_course{
+/* #gnb_q_building,#gnb_q_course{
     border:none;
     background: none;
     outline: none;
@@ -242,15 +245,22 @@ nav{
     width:70%;
     font-size:0.65rem;
     padding-left:10px;
-    box-sizing: border-box;
+    box-sizing: border-box; */
 }
 ::placeholder{
     color:#777;
 }
-.gnb_q_form .search_icon {
-    height:20px;
+
+.makerelative{
+    position: relative;
 }
-  
+.search_icon{
+    height:25px;
+    position: absolute;
+    right:15px;
+    top:12px;
+}
+
 @media(max-width: 849px){
     .small_menu_section{
         width:50vw;
@@ -375,6 +385,7 @@ footer{
     /* display: flex; */
     /* align-items: c; */
 }
+
 .speaker_content{
     display: inline-block;
     width: 510px;
@@ -385,6 +396,7 @@ footer{
     white-space:nowrap;
     word-wrap:break-word; 
     vertical-align:middle;
+    
 }
 
 .tri{
@@ -473,3 +485,6 @@ footer{
         width: 305px;
     }
 }
+
+
+

@@ -13,6 +13,7 @@
 
     <title>{% block title %}{% endblock %}</title>
     <link rel="Stylesheet" type="text/css" href="{% static 'css/base.css' %}?dt={% now 'Ymd' %}">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
 
     {% block extra_head %}{% endblock %}
   
@@ -34,32 +35,21 @@
     </nav>
     <section class="small_menu_section">
         <div class="small_menu_list_container">
-            <div class="search_cate">
-              
-                <input class= "search_type" id="search_place" type="radio" name="search_type">
-                <div class="display_cate">
-                    📌
-                </div>
-                <label class="search_place_label" for="search_place">
-                    강의실 찾기
-                </label>
-            </div>
+
+            <label>
+                <input type="radio" id="search_place" class="nes-radio"  name="search_type"  />
+                <span class="search_place_label" >강의실 찾기</span>
+            </label>
             
-            <div class="search_cate">
-               
+            <label>
+                <input type="radio" id ="search_course" class="nes-radio" name="search_type" />
+                <span class="search_course_label">강의 찾기</span>
+            </label>
 
-                <input class="search_type" id ="search_course"type="radio" name="search_type">
-                <div class="display_cate">
-                    📌
-                </div>
-                <label class="search_course_label" for="search_course">
-                    강의 찾기
-                </label>
-
-            </div>
             <div class="building_form">
-                <div class="gnb_q_form " method="get">
-                    <input id="gnb_q_building" type="search" name="q" placeholder="건물번호 검색!">
+
+                <div class="nes-field makerelative">
+                    <input class="nes-input" id="gnb_q_building" type="search" name="q" placeholder="건물번호/이름 검색!">
                     <img id="gnb_q_building_icon" class="search_icon" src="{% static 'image/돋보기.png' %}" alt="검색">
                 </div>
             </div>
@@ -67,8 +57,8 @@
             
             <div class="course_form">
 
-                <div class="gnb_q_form" method="get">
-                    <input id="gnb_q_course" type="search" name="q" placeholder="강의명 검색!">
+                <div class="nes-field makerelative">
+                    <input  class="nes-input" id="gnb_q_course" type="search" name="q" placeholder="강의명 검색!">
                     <img id="gnb_q_course_icon" class="search_icon" src="{% static 'image/돋보기.png' %}" alt="검색">
                 </div>
             </div>
@@ -76,7 +66,7 @@
             <!-- <div class="gnb_q_result">
                 전체 보기
             </div> -->
-
+<!-- 
             <form method="POST">
 
                 {%csrf_token%}
@@ -96,7 +86,7 @@
                 <a class="for_maker_delete" href = "{%url 'delete' i.id %}">삭제</a>
             </div>
                
-            {%endfor%}
+            {%endfor%} -->
            
         </div>
     </section>

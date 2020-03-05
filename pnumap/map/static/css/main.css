@@ -52,10 +52,10 @@
 	display: none;
 }
 .blind_active{
-	border-radius: 20px;
+	/* border-radius: 20px; */
 	position: absolute;
-	bottom:20px;
-	right: -58px;
+	bottom:12px;
+	right: -120px;
 	width: 150px;
 	height: 66px;
 	padding-top: 10px;
@@ -80,7 +80,7 @@
 	} 
 
 
-button.pack1 span {background:#d6181f;color:#fff;border:0}
+button.pack1 span {background:#d6181f;color:#fff;}
 	button.pack101 {top:675px;left:257px}
 	button.pack102 {top:679px;left:290px}
 	button.pack103 {top:650px;left:298px}
@@ -91,7 +91,7 @@ button.pack1 span {background:#d6181f;color:#fff;border:0}
 	button.pack109 {top:625px;left:500px}
 	button.pack110 {top:600px;left:553px}
 	button.pack111 {top:654px;left:508px}
-button.pack2 span {background:#eb572a;color:#fff;border:0}
+button.pack2 span {background:#eb572a;color:#fff;}
 	button.pack201 {top:562px;left:279px}
 	button.pack202 {top:521px;left:281px}
 	button.pack203 {top:543px;left:359px}
@@ -103,7 +103,7 @@ button.pack2 span {background:#eb572a;color:#fff;border:0}
 	button.pack209 {top:484px;left:737px}
 	button.pack210 {top:414px;left:724px}
 	button.pack211 {top:406px;left:772px}
-button.pack3 span {background:#ffc900;color:#222;border:0}
+button.pack3 span {background:#ffc900;color:#222;}
 	button.packK08 {top:485px;left:111px}
 	button.pack301 {top:529px;left:147px}
 	button.pack302 {top:535px;left:201px}
@@ -121,7 +121,7 @@ button.pack3 span {background:#ffc900;color:#222;border:0}
 	button.pack316 {top:365px;left:702px}
 	button.pack317 {top:363px;left:748px}
 	button.pack318 {top:326px;left:724px}
-button.pack4 span {background:#07834d;color:#fff;border:1px solid #0e5234}
+button.pack4 span {background:#07834d;color:#fff;}
 	button.pack401 {top:403px;left:152px}
 	button.pack402 {top:368px;left:121px}
 	button.pack403 {top:394px;left:200px}
@@ -143,7 +143,7 @@ button.pack4 span {background:#07834d;color:#fff;border:1px solid #0e5234}
 	button.pack420 {top:327px;left:592px}
 	button.pack421 {top:266px;left:592px}
 	button.pack422 {top:289px;left:677px}
-button.pack5 span {background:#4dbcbd;color:#222;border:1px solid #297e7f}
+button.pack5 span {background:#4dbcbd;color:#222;}
 	button.pack501 {top:299px;left:134px}
 	button.pack502 {top:318px;left:166px}
 	button.pack503 {top:286px;left:163px}
@@ -159,7 +159,7 @@ button.pack5 span {background:#4dbcbd;color:#222;border:1px solid #297e7f}
 	button.pack514 {top:204px;left:541px}
 	button.pack515 {top:248px;left:332px}
 	button.pack516 {top:198px;left:474px}
-button.pack6 span {background:#009eef;color:#fff;border:0}
+button.pack6 span {background:#009eef;color:#fff;}
 	button.pack601 {top:240px;left:155px}
 	button.pack602 {top:218px;left:232px}
 	button.pack603 {top:206px;left:263px}
@@ -168,7 +168,7 @@ button.pack6 span {background:#009eef;color:#fff;border:0}
 	button.pack607 {top:153px;left:423px}
 	button.pack608 {top:140px;left:469px}
 	button.pack609 {top:146px;left:526px}
-button.pack7 span {background:#8048a0;color:#fff;border:0}
+button.pack7 span {background:#8048a0;color:#fff;}
 	button.pack701 {top:154px;left:51px}
 	button.pack702 {top:190px;left:189px}
 	button.pack703 {top:153px;left:196px}
@@ -186,7 +186,7 @@ button.pack7 span {background:#8048a0;color:#fff;border:0}
 	button.pack715 {top:86px;left:555px}
 	button.pack716 {top:56px;left:535px}
 	button.pack717 {top:46px;left:508px}
-.landmark {display:block;position:absolute;border-radius:999px;box-sizing:border-box;background:#fff;border:1px solid #666;font-size:11px;padding:2px 7px;z-index:1; width:57px; text-align: center;}
+.landmark {display:block;position:absolute;border-radius:999px;box-sizing:border-box;background:#fff;nt-size:11px;padding:2px 7px;z-index:1; width:57px; text-align: center;}
 .landmark1 {left:159px;top:363px}
 .landmark2 {left:344px;top:374px}
 .landmark3 {left:480px;top:384px}
@@ -251,10 +251,9 @@ button{
 
 
 
-.coursebtn{
+.nes-balloon > .coursebtn{
 	display: block;
-	padding: 4px;
-	margin: 8px;
+	padding: 2px;
 	border: 2px solid white;
 	border-radius: 5px;
 	color: white;
@@ -270,6 +269,9 @@ button.pack410>.blind_active{
 	font-size: 0.67rem;
 }
 
+.nes-bal-custom{
+	padding:10px;
+}
 .building_info_section{
 	position: absolute;
 	margin: auto;
