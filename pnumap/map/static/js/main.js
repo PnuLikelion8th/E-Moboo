@@ -1,7 +1,10 @@
 //처음 보여지는 맵 화면이 가운데로 가도록
 const focus_here = document.getElementById('focus');
 focus_here.focus({preventScroll:false});
-        
+
+const modal_hidden = () => {
+    const modal = document.querySelector('.building_info_section').style.display = "none";
+}
 //건물 별 효과
 const btn = document.getElementsByTagName('button');
 let pre_btn =""
@@ -41,7 +44,3 @@ for(let i=0; i < btn.length; i++){
 
 
 
-
-const modal_hidden = () => {
-    const modal = document.querySelector('.building_info_section').style.display="none";
-}

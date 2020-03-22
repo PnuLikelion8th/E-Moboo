@@ -133,7 +133,6 @@ nav{
         width : 25vw;
         left:0;
         top:0;
-        padding-left:50px;
         height: 100%;
         background: white;
         transform: matrix(1, 0, 0, 1, -400, 0);

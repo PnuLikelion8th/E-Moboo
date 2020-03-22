@@ -59,7 +59,7 @@
 	width: 150px;
 	height: 66px;
 	padding-top: 10px;
-	font-size: 0.8rem;
+	font-size: 0.6rem;
 	font-weight: 900;
 	color: white;
 	z-index: 99;
@@ -68,6 +68,7 @@
 	animation-iteration-count: 1;
 	animation-duration: 0.7s;
 	animation-name: blind_toggle;
+	
 
 }
 	@keyframes blind_toggle {
@@ -277,10 +278,11 @@ button.pack410>.blind_active{
 	margin: auto;
     left: 0;
     right: 0;
-    top: 0;
+    top: 50%;
     bottom: 0;
 	width:320px;
 	height: 500px;
+	margin-top:-200px;
 	background-color: #f16512;
 	color:white;
 	border-radius: 40px;
@@ -398,4 +400,8 @@ button.pack410>.blind_active{
 }
 .clear{
 	clear: both;
+}
+
+.speaker_hidden_section{
+	display: inline-block;
 }
