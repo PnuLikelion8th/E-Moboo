@@ -1,9 +1,11 @@
+if (document.querySelector('.score_up')){
 
+    const score_up = document.querySelector('.score_up')
+    const score_down = document.querySelector('.score_down')
+    score_up.addEventListener('click', score, false);
+    score_down.addEventListener('click', score, false);
+}
 
-const score_up = document.querySelector('.score_up')
-const score_down = document.querySelector('.score_down')
-score_up.addEventListener('click', score, false);
-score_down.addEventListener('click', score, false);
 
 function score(e) {
     document.querySelector('#score_lec').value
